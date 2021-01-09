@@ -2,7 +2,7 @@ import React, { useEffect } from "react"
 import styled from "styled-components"
 import { graphql, useStaticQuery, Link } from "gatsby"
 import Img from "gatsby-image"
-import kwesforms from 'kwesforms';
+import kwesforms from "kwesforms"
 import { Container } from "../global"
 
 const Header = () => {
@@ -22,9 +22,10 @@ const Header = () => {
     event.preventDefault()
   }
   useEffect(() => {
-    kwesforms.init();
+    kwesforms.init()
+    console.log("init form")
   })
-  
+
   return (
     <HeaderWrapper id="top">
       <Container>
@@ -32,23 +33,27 @@ const Header = () => {
           <HeaderTextGroup>
             <Subtitle>Personal Finance</Subtitle>
             <h1>
-              All your money,
+              Exploring careers
               <br />
-              one account
+              shouldn't be
+              <br />
+              boring.
             </h1>
             <h2>
-              We're building next generation personal finance tools. Sign up to
-              get early access.
+              Sign up today to stay in touch and see when we launch! 🚀 We
+              promise we won’t spam.
             </h2>
-            <HeaderForm class="kwes-form" action="https://kwes.io/api/foreign/forms/kPeK9BTCz6WeeNnEtSIT">
-            <HeaderInput name="name" placeholder="Your first name" />
-              <HeaderInput name="phone" placeholder="Your phone number"  />
-              <HeaderButton type="submit">Early access</HeaderButton>
+            <HeaderForm
+              class="kwes-form"
+              action="https://kwes.io/api/foreign/forms/kPeK9BTCz6WeeNnEtSIT"
+            >
+              {/* <label> First Name</label>
+              <label> Phone Number</label>
+              <br /> */}
+              <HeaderInput name="name" placeholder="Your first name" />
+              <HeaderInput name="phone" placeholder="Your phone number" />
+              <HeaderButton type="submit">Get Updates</HeaderButton>
             </HeaderForm>
-            <FormSubtitle>
-              Already have a beta account?{" "}
-              <FormSubtitleLink to="/">Sign in</FormSubtitleLink>
-            </FormSubtitle>
           </HeaderTextGroup>
           <ImageWrapper>
             <StyledImage fluid={data.file.childImageSharp.fluid} />

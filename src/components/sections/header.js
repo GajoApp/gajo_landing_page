@@ -1,8 +1,8 @@
-import React from "react"
+import React, { useEffect } from "react"
 import styled from "styled-components"
 import { graphql, useStaticQuery, Link } from "gatsby"
 import Img from "gatsby-image"
-
+import kwesforms from 'kwesforms';
 import { Container } from "../global"
 
 const Header = () => {
@@ -21,7 +21,10 @@ const Header = () => {
   const handleSubmit = event => {
     event.preventDefault()
   }
-
+  useEffect(() => {
+    kwesforms.init();
+  })
+  
   return (
     <HeaderWrapper id="top">
       <Container>
@@ -37,9 +40,10 @@ const Header = () => {
               We're building next generation personal finance tools. Sign up to
               get early access.
             </h2>
-            <HeaderForm onSubmit={handleSubmit}>
-              <HeaderInput placeholder="Your email" />
-              <HeaderButton>Early access</HeaderButton>
+            <HeaderForm class="kwes-form" action="https://kwes.io/api/foreign/forms/kPeK9BTCz6WeeNnEtSIT">
+            <HeaderInput name="name" placeholder="Your first name" />
+              <HeaderInput name="phone" placeholder="Your phone number"  />
+              <HeaderButton type="submit">Early access</HeaderButton>
             </HeaderForm>
             <FormSubtitle>
               Already have a beta account?{" "}

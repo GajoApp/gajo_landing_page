@@ -107,11 +107,6 @@ const Header = () => {
                   <HeaderButton type="submit">Get Updates</HeaderButton>
                 </SubmitContainer>
               </FormConatiner>
-              {/* <label for="name">Your First Name</label>
-              <HeaderInput name="name" placeholder="Your first name" rules="alpha|max:25" />
-              <label for="phone">Your Phone Number</label>
-              <HeaderInput name="phone" placeholder="Your phone number" rules="required|regex:/^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}$" />
-              <HeaderButton type="submit">Get Updates</HeaderButton> */}
             </HeaderForm>
           </HeaderTextGroup>
           <ImageWrapper>

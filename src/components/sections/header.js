@@ -22,8 +22,10 @@ const Header = () => {
     event.preventDefault()
   }
   useEffect(() => {
-    kwesforms.init()
-    console.log("init form")
+    if (window.location.hostname === 'localhost') {
+      console.log("I'm on localhost")
+    } 
+    kwesforms.init();
   })
 
   return (
@@ -44,14 +46,16 @@ const Header = () => {
               promise we won’t spam.
             </h2>
             <HeaderForm
-              class="kwes-form"
-              action="https://kwes.io/api/foreign/forms/kPeK9BTCz6WeeNnEtSIT"
+              className="kwes-form"
+              action="https://kwes.io/api/foreign/forms/sWHosqzNcJWrSLP8Zilf"
             >
               {/* <label> First Name</label>
               <label> Phone Number</label>
               <br /> */}
-              <HeaderInput name="name" placeholder="Your first name" />
-              <HeaderInput name="phone" placeholder="Your phone number" />
+              <label for="name">Your First Name</label>
+              <HeaderInput name="name" placeholder="Your first name" rules="alpha|max:25" />
+              <label for="phone">Your Phone Number</label>
+              <HeaderInput name="phone" placeholder="Your phone number" rules="required|regex:/^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}$" />
               <HeaderButton type="submit">Get Updates</HeaderButton>
             </HeaderForm>
           </HeaderTextGroup>

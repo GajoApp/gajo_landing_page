@@ -11,6 +11,7 @@ import Header from "../components/sections/header"
 
 const IndexPage = () => (
   <Layout>
+
     <SEO title="Home" />
     <Header />
   </Layout>

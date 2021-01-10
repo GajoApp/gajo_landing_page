@@ -92,11 +92,21 @@ const Header = () => {
               {/* <label> First Name</label>
               <label> Phone Number</label>
               <br /> */}
-              <label for="name">Your First Name</label>
-              <HeaderInput name="name" placeholder="Your first name" rules="alpha|max:25" />
-              <label for="phone">Your Phone Number</label>
-              <HeaderInput name="phone" placeholder="Your phone number" rules="required|regex:/^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}$" />
-              <HeaderButton type="submit">Get Updates</HeaderButton>
+              <FormConatiner> 
+                  <InputsContainer>
+                  <div>
+                    <label for="name">Your First Name</label>
+                    <HeaderInput name="name" placeholder="Your first name" rules="alpha|max:25" />
+                  </div>
+                  <div>
+                    <label for="phone">Your Phone Number</label>
+                    <HeaderInput name="phone" placeholder="Your phone number" rules="required|regex:/^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}$" />
+                  </div>
+                  </InputsContainer>
+                <SubmitContainer> 
+                  <HeaderButton type="submit">Get Updates</HeaderButton>
+                </SubmitContainer>
+              </FormConatiner>
             </HeaderForm>
           </HeaderTextGroup>
           <ImageWrapper>
@@ -239,6 +249,24 @@ const Flex = styled.div`
     grid-template-columns: 1fr;
     grid-gap: 64px;
   }
+`
+const FormConatiner = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+`
+const InputsContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+  margin: 10px;
+`
+const SubmitContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  margin: 10px;
+  width: 100%;
 `
 
 const HeaderForm = styled.form`

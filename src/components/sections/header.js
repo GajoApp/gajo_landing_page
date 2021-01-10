@@ -93,7 +93,7 @@ const Header = () => {
               <label> Phone Number</label>
               <br /> */}
               <FormConatiner> 
-                  <InputsContainer>
+                <InputsContainer>
                   <div>
                     <label for="name">Your First Name</label>
                     <HeaderInput name="name" placeholder="Your first name" rules="alpha|max:25" />
@@ -102,11 +102,16 @@ const Header = () => {
                     <label for="phone">Your Phone Number</label>
                     <HeaderInput name="phone" placeholder="Your phone number" rules="required|regex:/^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}$" />
                   </div>
-                  </InputsContainer>
+                </InputsContainer>
                 <SubmitContainer> 
                   <HeaderButton type="submit">Get Updates</HeaderButton>
                 </SubmitContainer>
               </FormConatiner>
+              {/* <label for="name">Your First Name</label>
+              <HeaderInput name="name" placeholder="Your first name" rules="alpha|max:25" />
+              <label for="phone">Your Phone Number</label>
+              <HeaderInput name="phone" placeholder="Your phone number" rules="required|regex:/^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}$" />
+              <HeaderButton type="submit">Get Updates</HeaderButton> */}
             </HeaderForm>
           </HeaderTextGroup>
           <ImageWrapper>
@@ -137,7 +142,7 @@ z-index: -1;
 transform-origin: right bottom; /* or 100% 100%, same thing */
 transform:
   rotate(65deg)
-  translate(-6%, 120%); /* go from bottom right to top right */
+  translate(6%, 120%); /* go from bottom right to top right */
 
 background: white;
 position: absolute;
@@ -152,7 +157,7 @@ z-index: -1;
 transform-origin: right bottom; /* or 100% 100%, same thing */
 transform:
   rotate(-120deg)
-  translate(9%, 10%); /* go from bottom right to top right */
+  translate(4%, 10%); /* go from bottom right to top right */
 
 background: white;
 position: absolute;
@@ -167,7 +172,7 @@ z-index: -1;
 transform-origin: right bottom; /* or 100% 100%, same thing */
 transform:
   rotate(-120deg)
-  translate(95%, 28.2%); /* go from bottom right to top right */
+  translate(88%, 28.2%); /* go from bottom right to top right */
 
 background: white;
 position: absolute;
@@ -182,7 +187,7 @@ z-index: -1;
 transform-origin: right bottom; /* or 100% 100%, same thing */
 transform:
   rotate(90deg)
-  translate(-25%, 200%); /* go from bottom right to top right */
+  translate(-20%, 200%); /* go from bottom right to top right */
 
 background: white;
 position: absolute;
@@ -250,6 +255,7 @@ const Flex = styled.div`
     grid-gap: 64px;
   }
 `
+
 const FormConatiner = styled.div`
   display: flex;
   flex-direction: column;

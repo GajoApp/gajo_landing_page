@@ -61,8 +61,9 @@ const Header = () => {
 
   return (
     <HeaderWrapper id="top">
-      <LeftGreenCurve/>
+      <AcrossFigma/>
 
+      <LeftGreenCurve/>
       <RightCornerCurve/>
       <CurvyBackground3/>
       <CornerCurve/>
@@ -148,6 +149,16 @@ transform: translate(20%, -18%);
 clip-path: url(#curveFigma);
 `
 
+const AcrossFigma = styled.div`
+z-index: -1;
+background: #3C896D;
+position: absolute;
+height: 97%;
+width: 50%;
+transform: translate(100%, 20%);
+clip-path: url(#acrossFigma);
+`
+
 const LeftRectangle = styled.div`
 /* Rectangle 66 */
 
@@ -180,6 +191,21 @@ transform: translate(20%, 20%);
 
 `
 
+const AcrossCurve = styled.div`
+/* Vector */
+z-index: 1;
+position: absolute;
+width: 700%;
+height: 70%;
+// left: 1437px;
+// top: 256px;
+
+background: red;
+opacity: 0.5;
+transform: translate(-10%, -20%);
+// transform: matrix(-1, 0, 0, 1, 0, 0);
+
+`
 
 const CurvyBackground = styled.div`
 // margin-top: -100px;

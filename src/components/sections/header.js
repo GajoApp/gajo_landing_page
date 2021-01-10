@@ -61,9 +61,15 @@ const Header = () => {
 
   return (
     <HeaderWrapper id="top">
+      <CurvyBackground/>
+      <CurvyBackground2/>
+      <CurvyBackground3/>
+      <CurvyBackground4/>
+      <CornerCurve/>
       <Container>
         <Flex>
           <HeaderTextGroup>
+          
           <ImageWrapper>
             <StyledImage1 fluid={gajo_logo} />
             <br />
@@ -100,15 +106,86 @@ const Header = () => {
         </Flex>
       </Container>
     </HeaderWrapper>
+    
   )
 }
 
 export default Header
 
+const CornerCurve = styled.div`
+z-index: -1;
+// background: red;
+// position: absolute;
+height: 10%;
+width: 10%;
+clip-path: url(#corner);
+`
+
+const CurvyBackground = styled.div`
+// margin-top: -100px;
+z-index: -1;
+transform-origin: right bottom; /* or 100% 100%, same thing */
+transform:
+  rotate(65deg)
+  translate(-6%, 120%); /* go from bottom right to top right */
+
+background: white;
+position: absolute;
+height: 70%;
+width: 70%;
+clip-path: url(#wave);
+`
+
+const CurvyBackground2 = styled.div`
+// margin-top: -100px;
+z-index: -1;
+transform-origin: right bottom; /* or 100% 100%, same thing */
+transform:
+  rotate(-120deg)
+  translate(9%, 10%); /* go from bottom right to top right */
+
+background: white;
+position: absolute;
+height: 30%;
+width: 20%;
+clip-path: url(#wave);
+`
+
+const CurvyBackground3 = styled.div`
+// margin-top: -100px;
+z-index: -1;
+transform-origin: right bottom; /* or 100% 100%, same thing */
+transform:
+  rotate(-120deg)
+  translate(95%, 28.2%); /* go from bottom right to top right */
+
+background: white;
+position: absolute;
+height: 30%;
+width: 15%;
+clip-path: url(#wave);
+`
+
+const CurvyBackground4 = styled.div`
+// margin-top: -100px;
+z-index: -1;
+transform-origin: right bottom; /* or 100% 100%, same thing */
+transform:
+  rotate(90deg)
+  translate(-25%, 200%); /* go from bottom right to top right */
+
+background: white;
+position: absolute;
+height: 30%;
+width: 30%;
+clip-path: url(#wave);
+`
+
 const HeaderWrapper = styled.header`
-  background-color: #f8f8f8;
+  background-color: #3c896d;
+  z-index: 2;
   padding: 160px 0 80px 0;
-  position: relative;
+  // position: relative;
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 5vw));
   @media (max-width: ${props => props.theme.screen.md}) {
   }
@@ -122,6 +199,7 @@ const Subtitle = styled.h5`
 
 const HeaderTextGroup = styled.div`
   margin: 0;
+  z-index: 0;
 
   > div {
     width: 120%;
@@ -153,6 +231,7 @@ const HeaderTextGroup = styled.div`
 
 const Flex = styled.div`
   display: grid;
+  // z-index: 4;
   justify-content: space-between;
   align-content: center;
   grid-template-columns: 1fr 1fr;

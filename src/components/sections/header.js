@@ -8,19 +8,37 @@ import { Container } from "../global"
 const Header = () => {
   const data = useStaticQuery(graphql`
     query {
-      file(sourceInstanceName: { eq: "product" }, name: { eq: "green-skew" }) {
-        childImageSharp {
-          fluid(maxWidth: 1000) {
-            ...GatsbyImageSharpFluid_tracedSVG
+      allFile(filter: {absolutePath: {regex: "/product/"}}) {
+        edges {
+          node {
+            id
+            absolutePath
+            childImageSharp {
+              fluid(maxWidth: 1000) {
+                ...GatsbyImageSharpFluid_tracedSVG
+              }
+            }
           }
         }
       }
-    }
-  `)
-
-  const handleSubmit = event => {
-    event.preventDefault()
   }
+  `)
+//   file(sourceInstanceName: { eq: "product" }, name: { eq: "green-skew" }) {
+//     childImageSharp {
+//       fluid(maxWidth: 1000) {
+//         ...GatsbyImageSharpFluid_tracedSVG
+//       }
+//     }
+//   }
+// }, 
+// file(sourceInstanceName: { eq: "product" }, name: { eq: "gajo-logo" }) {
+//   childImageSharp {
+//     fluid(maxWidth: 1000) {
+//       ...GatsbyImageSharpFluid_tracedSVG
+//     }
+//   }
+// }
+
   useEffect(() => {
     if (window.location.hostname === 'localhost') {
       console.log("I'm on localhost")
@@ -33,7 +51,10 @@ const Header = () => {
       <Container>
         <Flex>
           <HeaderTextGroup>
-            <Subtitle>Personal Finance</Subtitle>
+          <ImageWrapper>
+            <StyledImage1 fluid={data.allFile.edges[4].node.childImageSharp.fluid} />
+            <br />
+          </ImageWrapper>
             <h1>
               Exploring careers
               <br />
@@ -60,7 +81,7 @@ const Header = () => {
             </HeaderForm>
           </HeaderTextGroup>
           <ImageWrapper>
-            <StyledImage fluid={data.file.childImageSharp.fluid} />
+            <StyledImage fluid={data.allFile.edges[1].node.childImageSharp.fluid} />
             <br />
           </ImageWrapper>
         </Flex>
@@ -101,15 +122,19 @@ const HeaderTextGroup = styled.div`
   h1 {
     margin: 0 0 24px;
     color: ${props => props.theme.color.primary};
+    font-family: Karla;
+    font-style: normal;
   }
 
   h2 {
     margin-bottom: 24px;
     ${props => props.theme.font_size.regular}
+    color: black;
   }
 
   p {
     margin-bottom: 48px;
+    color: black;
   }
 `
 
@@ -217,5 +242,18 @@ const StyledImage = styled(Img)`
   @media (max-width: ${props => props.theme.screen.sm}) {
     width: 300px;
     display: none;
+  }
+`
+
+const StyledImage1 = styled(Img)`
+  width: 250px;
+  margin-bottom: 55px;
+  @media (max-width: ${props => props.theme.screen.md}) {
+    width: 400px;
+  }
+  @media (max-width: ${props => props.theme.screen.sm}) {
+    width: 150px;
+
+    
   }
 `

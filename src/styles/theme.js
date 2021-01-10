@@ -2,7 +2,7 @@
 
 const theme = {
   font: {
-    primary: `'HK Grotesk Normal'`,
+    primary: `'Karla Normal'`,
     secondary: `'HK Grotesk Medium'`,
     light: `'HK Grotesk Light'`,
     normal: `'HK Grotesk Normal'`,
@@ -23,7 +23,7 @@ const theme = {
   },
 
   color: {
-    primary: "#071435",
+    primary: "#3C896D",
     secondary: "#ff7070",
     accent: "#cca86e",
     background: {

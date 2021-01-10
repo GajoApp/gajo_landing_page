@@ -62,10 +62,9 @@ const Header = () => {
   return (
     <HeaderWrapper id="top">
       <AcrossFigma/>
-
       <LeftGreenCurve/>
       <RightCornerCurve/>
-      <CurvyBackground3/>
+      <CurvyBackground/>
       <CornerCurve/>
       <LeftRectangle/>
       <Container>
@@ -190,54 +189,7 @@ transform: translate(20%, 20%);
 // transform: matrix(-1, 0, 0, 1, 0, 0);
 
 `
-
-const AcrossCurve = styled.div`
-/* Vector */
-z-index: 1;
-position: absolute;
-width: 700%;
-height: 70%;
-// left: 1437px;
-// top: 256px;
-
-background: red;
-opacity: 0.5;
-transform: translate(-10%, -20%);
-// transform: matrix(-1, 0, 0, 1, 0, 0);
-
-`
-
 const CurvyBackground = styled.div`
-// margin-top: -100px;
-z-index: -1;
-transform-origin: right bottom; /* or 100% 100%, same thing */
-transform:
-  rotate(65deg)
-  translate(6%, 120%); /* go from bottom right to top right */
-
-background: white;
-position: absolute;
-height: 70%;
-width: 70%;
-clip-path: url(#wave);
-`
-
-const CurvyBackground2 = styled.div`
-// margin-top: -100px;
-z-index: -1;
-transform-origin: right bottom; /* or 100% 100%, same thing */
-transform:
-  rotate(-120deg)
-  translate(4%, 10%); /* go from bottom right to top right */
-
-background: white;
-position: absolute;
-height: 30%;
-width: 20%;
-clip-path: url(#wave);
-`
-
-const CurvyBackground3 = styled.div`
 // margin-top: -100px;
 z-index: -1;
 transform-origin: right bottom; /* or 100% 100%, same thing */
@@ -251,21 +203,66 @@ height: 30%;
 width: 15%;
 clip-path: url(#wave);
 `
+// const AcrossCurve = styled.div`
+// /* Vector */
+// z-index: 1;
+// position: absolute;
+// width: 700%;
+// height: 70%;
+// // left: 1437px;
+// // top: 256px;
 
-const CurvyBackground4 = styled.div`
-// margin-top: -100px;
-z-index: -1;
-transform-origin: right bottom; /* or 100% 100%, same thing */
-transform:
-  rotate(90deg)
-  translate(-20%, 200%); /* go from bottom right to top right */
+// background: red;
+// opacity: 0.5;
+// transform: translate(-10%, -20%);
+// // transform: matrix(-1, 0, 0, 1, 0, 0);
 
-background: white;
-position: absolute;
-height: 30%;
-width: 30%;
-clip-path: url(#wave);
-`
+// `
+
+// const CurvyBackground = styled.div`
+// // margin-top: -100px;
+// z-index: -1;
+// transform-origin: right bottom; /* or 100% 100%, same thing */
+// transform:
+//   rotate(65deg)
+//   translate(6%, 120%); /* go from bottom right to top right */
+
+// background: white;
+// position: absolute;
+// height: 70%;
+// width: 70%;
+// clip-path: url(#wave);
+// `
+
+// const CurvyBackground2 = styled.div`
+// // margin-top: -100px;
+// z-index: -1;
+// transform-origin: right bottom; /* or 100% 100%, same thing */
+// transform:
+//   rotate(-120deg)
+//   translate(4%, 10%); /* go from bottom right to top right */
+
+// background: white;
+// position: absolute;
+// height: 30%;
+// width: 20%;
+// clip-path: url(#wave);
+// `
+
+// const CurvyBackground4 = styled.div`
+// // margin-top: -100px;
+// z-index: -1;
+// transform-origin: right bottom; /* or 100% 100%, same thing */
+// transform:
+//   rotate(90deg)
+//   translate(-20%, 200%); /* go from bottom right to top right */
+
+// background: white;
+// position: absolute;
+// height: 30%;
+// width: 30%;
+// clip-path: url(#wave);
+// `
 
 const HeaderWrapper = styled.header`
   background-color: #3c896d;

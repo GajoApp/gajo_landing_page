@@ -61,11 +61,12 @@ const Header = () => {
 
   return (
     <HeaderWrapper id="top">
-      <CurvyBackground/>
-      <CurvyBackground2/>
+      <LeftGreenCurve/>
+
+      <RightCornerCurve/>
       <CurvyBackground3/>
-      <CurvyBackground4/>
       <CornerCurve/>
+      <LeftRectangle/>
       <Container>
         <Flex>
           <HeaderTextGroup>
@@ -122,14 +123,63 @@ const Header = () => {
 
 export default Header
 
+const RightCornerCurve = styled.div`
+/* Vector 21 */
+
+position: absolute;
+width: 145.55px;
+height: 121.35px;
+left: 1462.52px;
+top: -26.87px;
+
+opacity: 0.3;
+border: 20px solid #61DAA4;
+transform: matrix(-1, 0, 0, 1, 0, 0);
+
+`
+
 const CornerCurve = styled.div`
 z-index: -1;
-// background: red;
-// position: absolute;
-height: 10%;
-width: 10%;
-clip-path: url(#corner);
+background: white;
+position: absolute;
+height: 97%;
+width: 100%;
+transform: translate(20%, -18%);
+clip-path: url(#curveFigma);
 `
+
+const LeftRectangle = styled.div`
+/* Rectangle 66 */
+
+position: absolute;
+width: 35%;
+height: 150%;
+// left: 592px;
+// top: 0px;
+
+background: white;
+transform: 
+  rotate(-35deg)
+  translate(33%, -20%);
+// transform: matrix(-1, 0, 0, 1, 0, 0);
+`
+
+const LeftGreenCurve = styled.div`
+/* Vector */
+z-index: -2;
+position: absolute;
+width: 100%;
+height: 70%;
+// left: 1437px;
+// top: 256px;
+
+background: linear-gradient(127.33deg, rgba(42, 221, 156, 0) 37.16%, #29E19E 70.79%);
+opacity: 0.5;
+transform: translate(20%, 20%);
+// transform: matrix(-1, 0, 0, 1, 0, 0);
+
+`
+
 
 const CurvyBackground = styled.div`
 // margin-top: -100px;
@@ -167,7 +217,7 @@ z-index: -1;
 transform-origin: right bottom; /* or 100% 100%, same thing */
 transform:
   rotate(-120deg)
-  translate(88%, 28.2%); /* go from bottom right to top right */
+  translate(3%, -25%); /* go from bottom right to top right */
 
 background: white;
 position: absolute;

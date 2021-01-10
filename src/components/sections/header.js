@@ -12,7 +12,7 @@ const Header = () => {
         edges {
           node {
             id
-            absolutePath
+            relativePath
             childImageSharp {
               fluid(maxWidth: 1000) {
                 ...GatsbyImageSharpFluid_tracedSVG
@@ -23,6 +23,19 @@ const Header = () => {
       }
   }
   `)
+  let gajo_logo;
+  let iphone_img;
+  data.allFile.edges.map((edge) => console.log(edge));
+  data.allFile.edges.map((edge) => {
+    console.log(edge.node.relativePath);
+    if (edge.node.relativePath === "green-skew.png") {
+      iphone_img = edge.node.childImageSharp.fluid;
+    } else if (edge.node.relativePath === "gajo_logo.png") {
+      gajo_logo = edge.node.childImageSharp.fluid;
+    }
+  })
+
+
 //   file(sourceInstanceName: { eq: "product" }, name: { eq: "green-skew" }) {
 //     childImageSharp {
 //       fluid(maxWidth: 1000) {
@@ -52,7 +65,7 @@ const Header = () => {
         <Flex>
           <HeaderTextGroup>
           <ImageWrapper>
-            <StyledImage1 fluid={data.allFile.edges[4].node.childImageSharp.fluid} />
+            <StyledImage1 fluid={gajo_logo} />
             <br />
           </ImageWrapper>
             <h1>
@@ -81,7 +94,7 @@ const Header = () => {
             </HeaderForm>
           </HeaderTextGroup>
           <ImageWrapper>
-            <StyledImage fluid={data.allFile.edges[1].node.childImageSharp.fluid} />
+            <StyledImage fluid={iphone_img} />
             <br />
           </ImageWrapper>
         </Flex>

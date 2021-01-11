@@ -4,11 +4,14 @@ import { graphql, useStaticQuery, Link } from "gatsby"
 import Img from "gatsby-image"
 import kwesforms from "kwesforms"
 import { Container } from "../global"
+import Background from "../common/layout/background"
+import background from "../../images/assets/background.svg"
 
+const background_image = () => <><img src={background} /></>
 const Header = () => {
   const data = useStaticQuery(graphql`
     query {
-      allFile(filter: {absolutePath: {regex: "/product/"}}) {
+      allFile(filter: { absolutePath: { regex: "/product/" } }) {
         edges {
           node {
             id
@@ -21,60 +24,60 @@ const Header = () => {
           }
         }
       }
-  }
+    }
   `)
-  let gajo_logo;
-  let iphone_img;
-  data.allFile.edges.map((edge) => console.log(edge));
-  data.allFile.edges.map((edge) => {
-    console.log(edge.node.relativePath);
+  let gajo_logo
+  let iphone_img
+  data.allFile.edges.map(edge => console.log(edge))
+  data.allFile.edges.map(edge => {
+    console.log(edge.node.relativePath)
     if (edge.node.relativePath === "green-skew.png") {
       iphone_img = edge.node.childImageSharp.fluid;
     } else if (edge.node.relativePath === "gajo_logo.png") {
       gajo_logo = edge.node.childImageSharp.fluid;
-    }
+    } 
   })
 
-
-//   file(sourceInstanceName: { eq: "product" }, name: { eq: "green-skew" }) {
-//     childImageSharp {
-//       fluid(maxWidth: 1000) {
-//         ...GatsbyImageSharpFluid_tracedSVG
-//       }
-//     }
-//   }
-// }, 
-// file(sourceInstanceName: { eq: "product" }, name: { eq: "gajo-logo" }) {
-//   childImageSharp {
-//     fluid(maxWidth: 1000) {
-//       ...GatsbyImageSharpFluid_tracedSVG
-//     }
-//   }
-// }
+  //   file(sourceInstanceName: { eq: "product" }, name: { eq: "green-skew" }) {
+  //     childImageSharp {
+  //       fluid(maxWidth: 1000) {
+  //         ...GatsbyImageSharpFluid_tracedSVG
+  //       }
+  //     }
+  //   }
+  // },
+  // file(sourceInstanceName: { eq: "product" }, name: { eq: "gajo-logo" }) {
+  //   childImageSharp {
+  //     fluid(maxWidth: 1000) {
+  //       ...GatsbyImageSharpFluid_tracedSVG
+  //     }
+  //   }
+  // }
 
   useEffect(() => {
-    if (window.location.hostname === 'localhost') {
+    if (window.location.hostname === "localhost") {
       console.log("I'm on localhost")
-    } 
-    kwesforms.init();
+    }
+    kwesforms.init()
   })
 
   return (
     <HeaderWrapper id="top">
-      <AcrossFigma/>
+      {/* <AcrossFigma/>
       <LeftGreenCurve/>
       <RightCornerCurve/>
       <CurvyBackground/>
       <CornerCurve/>
-      <LeftRectangle/>
+      <LeftRectangle/> */}
+
       <Container>
         <Flex>
           <HeaderTextGroup>
-          
-          <ImageWrapper>
-            <StyledImage1 fluid={gajo_logo} />
-            <br />
-          </ImageWrapper>
+            {/* <Background /> */}
+            <ImageWrapper>
+              <StyledImage1 fluid={gajo_logo} />
+              <br />
+            </ImageWrapper>
             <h1>
               Exploring careers
               <br />
@@ -93,18 +96,26 @@ const Header = () => {
               {/* <label> First Name</label>
               <label> Phone Number</label>
               <br /> */}
-              <FormConatiner> 
+              <FormConatiner>
                 <InputsContainer>
                   <div>
                     <label for="name">Your First Name</label>
-                    <HeaderInput name="name" placeholder="Your first name" rules="alpha|max:25" />
+                    <HeaderInput
+                      name="name"
+                      placeholder="Your first name"
+                      rules="alpha|max:25"
+                    />
                   </div>
                   <div>
                     <label for="phone">Your Phone Number</label>
-                    <HeaderInput name="phone" placeholder="Your phone number" rules="required|regex:/^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}$" />
+                    <HeaderInput
+                      name="phone"
+                      placeholder="Your phone number"
+                      rules="required|regex:/^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}$"
+                    />
                   </div>
                 </InputsContainer>
-                <SubmitContainer> 
+                <SubmitContainer>
                   <HeaderButton type="submit">Get Updates</HeaderButton>
                 </SubmitContainer>
               </FormConatiner>
@@ -117,91 +128,88 @@ const Header = () => {
         </Flex>
       </Container>
     </HeaderWrapper>
-    
   )
 }
 
 export default Header
 
 const RightCornerCurve = styled.div`
-/* Vector 21 */
+  /* Vector 21 */
 
-position: absolute;
-width: 145.55px;
-height: 121.35px;
-left: 1462.52px;
-top: -26.87px;
+  position: absolute;
+  width: 145.55px;
+  height: 121.35px;
+  left: 1462.52px;
+  top: -26.87px;
 
-opacity: 0.3;
-border: 20px solid #61DAA4;
-transform: matrix(-1, 0, 0, 1, 0, 0);
-
+  opacity: 0.3;
+  border: 20px solid #61daa4;
+  transform: matrix(-1, 0, 0, 1, 0, 0);
 `
 
 const CornerCurve = styled.div`
-z-index: -1;
-background: white;
-position: absolute;
-height: 97%;
-width: 100%;
-transform: translate(20%, -18%);
-clip-path: url(#curveFigma);
+  z-index: -1;
+  background: white;
+  position: absolute;
+  height: 97%;
+  width: 100%;
+  transform: translate(20%, -18%);
+  clip-path: url(#curveFigma);
 `
 
 const AcrossFigma = styled.div`
-z-index: -1;
-background: #3C896D;
-position: absolute;
-height: 97%;
-width: 50%;
-transform: translate(100%, 20%);
-clip-path: url(#acrossFigma);
+  z-index: -1;
+  background: #3c896d;
+  position: absolute;
+  height: 97%;
+  width: 50%;
+  transform: translate(100%, 20%);
+  clip-path: url(#acrossFigma);
 `
 
 const LeftRectangle = styled.div`
-/* Rectangle 66 */
+  /* Rectangle 66 */
 
-position: absolute;
-width: 35%;
-height: 150%;
-// left: 592px;
-// top: 0px;
+  position: absolute;
+  width: 35%;
+  height: 150%;
+  // left: 592px;
+  // top: 0px;
 
-background: white;
-transform: 
-  rotate(-35deg)
-  translate(33%, -20%);
-// transform: matrix(-1, 0, 0, 1, 0, 0);
+  background: white;
+  transform: rotate(-35deg) translate(33%, -20%);
+  // transform: matrix(-1, 0, 0, 1, 0, 0);
 `
 
 const LeftGreenCurve = styled.div`
-/* Vector */
-z-index: -2;
-position: absolute;
-width: 100%;
-height: 70%;
-// left: 1437px;
-// top: 256px;
+  /* Vector */
+  z-index: -2;
+  position: absolute;
+  width: 100%;
+  height: 70%;
+  // left: 1437px;
+  // top: 256px;
 
-background: linear-gradient(127.33deg, rgba(42, 221, 156, 0) 37.16%, #29E19E 70.79%);
-opacity: 0.5;
-transform: translate(20%, 20%);
-// transform: matrix(-1, 0, 0, 1, 0, 0);
-
+  background: linear-gradient(
+    127.33deg,
+    rgba(42, 221, 156, 0) 37.16%,
+    #29e19e 70.79%
+  );
+  opacity: 0.5;
+  transform: translate(20%, 20%);
+  // transform: matrix(-1, 0, 0, 1, 0, 0);
 `
 const CurvyBackground = styled.div`
-// margin-top: -100px;
-z-index: -1;
-transform-origin: right bottom; /* or 100% 100%, same thing */
-transform:
-  rotate(-120deg)
-  translate(3%, -25%); /* go from bottom right to top right */
+  // margin-top: -100px;
+  z-index: -1;
+  transform-origin: right bottom; /* or 100% 100%, same thing */
+  transform: rotate(-120deg) translate(3%, -25%); /* go from bottom right to top right */
 
-background: white;
-position: absolute;
-height: 30%;
-width: 15%;
-clip-path: url(#wave);
+  background: white;
+  position: absolute;
+  height: 30%;
+  width: 15%;
+  clip-path: url(#wave);
 `
 // const AcrossCurve = styled.div`
 // /* Vector */
@@ -269,7 +277,8 @@ const HeaderWrapper = styled.header`
   z-index: 2;
   padding: 160px 0 80px 0;
   // position: relative;
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 5vw));
+  background-image: ${background_image};
+  background-size: contain;
   @media (max-width: ${props => props.theme.screen.md}) {
   }
 `
@@ -447,7 +456,5 @@ const StyledImage1 = styled(Img)`
   }
   @media (max-width: ${props => props.theme.screen.sm}) {
     width: 150px;
-
-    
   }
 `

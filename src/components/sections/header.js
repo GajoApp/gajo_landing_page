@@ -7,7 +7,7 @@ import { Container } from "../global"
 import Background from "../common/layout/background"
 import background from "../../images/assets/background.svg"
 
-const background_image = () => <><img src={background} /></>
+// const Background_image = () => <><img src={background} /></>
 const Header = () => {
   const data = useStaticQuery(graphql`
     query {
@@ -32,10 +32,10 @@ const Header = () => {
   data.allFile.edges.map(edge => {
     console.log(edge.node.relativePath)
     if (edge.node.relativePath === "green-skew.png") {
-      iphone_img = edge.node.childImageSharp.fluid;
+      iphone_img = edge.node.childImageSharp.fluid
     } else if (edge.node.relativePath === "gajo_logo.png") {
-      gajo_logo = edge.node.childImageSharp.fluid;
-    } 
+      gajo_logo = edge.node.childImageSharp.fluid
+    }
   })
 
   //   file(sourceInstanceName: { eq: "product" }, name: { eq: "green-skew" }) {
@@ -62,71 +62,72 @@ const Header = () => {
   })
 
   return (
+  
     <HeaderWrapper id="top">
       {/* <AcrossFigma/>
-      <LeftGreenCurve/>
-      <RightCornerCurve/>
-      <CurvyBackground/>
-      <CornerCurve/>
-      <LeftRectangle/> */}
-
-      <Container>
-        <Flex>
-          <HeaderTextGroup>
-            {/* <Background /> */}
+    <LeftGreenCurve/>
+    <RightCornerCurve/>
+    <CurvyBackground/>
+    <CornerCurve/>
+    <LeftRectangle/> */}
+        <Container>
+        <Background />
+          <Flex>
+            <HeaderTextGroup>
+              {/* <Background /> */}
+              <ImageWrapper>
+                <StyledImage1 fluid={gajo_logo} />
+                <br />
+              </ImageWrapper>
+              <h1>
+                Exploring careers
+                <br />
+                shouldn't be
+                <br />
+                boring.
+              </h1>
+              <h2>
+                Sign up today to stay in touch and see when we launch! 🚀 We
+                promise we won’t spam.
+              </h2>
+              <HeaderForm
+                className="kwes-form"
+                action="https://kwes.io/api/foreign/forms/sWHosqzNcJWrSLP8Zilf"
+              >
+                {/* <label> First Name</label>
+            <label> Phone Number</label>
+            <br /> */}
+                <FormConatiner>
+                  <InputsContainer>
+                    <div>
+                      <label for="name">Your First Name</label>
+                      <HeaderInput
+                        name="name"
+                        placeholder="Your first name"
+                        rules="alpha|max:25"
+                      />
+                    </div>
+                    <div>
+                      <label for="phone">Your Phone Number</label>
+                      <HeaderInput
+                        name="phone"
+                        placeholder="Your phone number"
+                        rules="required|regex:/^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}$"
+                      />
+                    </div>
+                  </InputsContainer>
+                  <SubmitContainer>
+                    <HeaderButton type="submit">Get Updates</HeaderButton>
+                  </SubmitContainer>
+                </FormConatiner>
+              </HeaderForm>
+            </HeaderTextGroup>
             <ImageWrapper>
-              <StyledImage1 fluid={gajo_logo} />
+              <StyledImage fluid={iphone_img} />
               <br />
             </ImageWrapper>
-            <h1>
-              Exploring careers
-              <br />
-              shouldn't be
-              <br />
-              boring.
-            </h1>
-            <h2>
-              Sign up today to stay in touch and see when we launch! 🚀 We
-              promise we won’t spam.
-            </h2>
-            <HeaderForm
-              className="kwes-form"
-              action="https://kwes.io/api/foreign/forms/sWHosqzNcJWrSLP8Zilf"
-            >
-              {/* <label> First Name</label>
-              <label> Phone Number</label>
-              <br /> */}
-              <FormConatiner>
-                <InputsContainer>
-                  <div>
-                    <label for="name">Your First Name</label>
-                    <HeaderInput
-                      name="name"
-                      placeholder="Your first name"
-                      rules="alpha|max:25"
-                    />
-                  </div>
-                  <div>
-                    <label for="phone">Your Phone Number</label>
-                    <HeaderInput
-                      name="phone"
-                      placeholder="Your phone number"
-                      rules="required|regex:/^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}$"
-                    />
-                  </div>
-                </InputsContainer>
-                <SubmitContainer>
-                  <HeaderButton type="submit">Get Updates</HeaderButton>
-                </SubmitContainer>
-              </FormConatiner>
-            </HeaderForm>
-          </HeaderTextGroup>
-          <ImageWrapper>
-            <StyledImage fluid={iphone_img} />
-            <br />
-          </ImageWrapper>
-        </Flex>
-      </Container>
+          </Flex>
+        </Container>
     </HeaderWrapper>
   )
 }
@@ -271,14 +272,23 @@ const CurvyBackground = styled.div`
 // width: 30%;
 // clip-path: url(#wave);
 // `
+// const Background_image = styled.div`
+//   background-color: #3c896d;
+//   z-index: 2;
+//   padding: 160px 0 80px 0;
+//   // position: relative;
+//   clip-path: url(../../images/assets/background.svg);
+//   // background-size: contain;
+//   @media (max-width: ${props => props.theme.screen.md}) {
+//   }
+// `
 
 const HeaderWrapper = styled.header`
   background-color: #3c896d;
   z-index: 2;
   padding: 160px 0 80px 0;
   // position: relative;
-  background-image: ${background_image};
-  background-size: contain;
+  // background-size: contain;
   @media (max-width: ${props => props.theme.screen.md}) {
   }
 `
@@ -325,6 +335,7 @@ const Flex = styled.div`
   display: grid;
   // z-index: 4;
   justify-content: space-between;
+  position: absolute;
   align-content: center;
   grid-template-columns: 1fr 1fr;
   @media (max-width: ${props => props.theme.screen.md}) {
@@ -337,6 +348,7 @@ const FormConatiner = styled.div`
   display: flex;
   flex-direction: column;
   margin: 10px;
+  position: absolute;
 `
 const InputsContainer = styled.div`
   display: flex;
@@ -419,6 +431,7 @@ const HeaderButton = styled.button`
   border-style: initial;
   border-color: initial;
   border-image: initial;
+  position: absolute;
   outline: 0px;
   &:hover {
     box-shadow: rgba(110, 120, 152, 0.22) 0px 2px 10px 0px;

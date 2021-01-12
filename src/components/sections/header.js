@@ -115,7 +115,7 @@ const Header = () => {
           </HeaderTextGroup>
           <ImageWrapper>
             <StyledImage fluid={iphone_img} />
-            <br />
+            
           </ImageWrapper>
         </Flex>
       </Container>

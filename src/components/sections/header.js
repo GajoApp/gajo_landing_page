@@ -91,18 +91,18 @@ const Header = () => {
               <FormConatiner>
                 <InputsContainer>
                   <FirstNameDiv>
-                    <label for="name">YOUR First Name</label>
+                    <Label for="name">First Name</Label>
                     <HeaderInput
                       name="name"
-                      placeholder="First Name"
+                      placeholder="Name"
                       rules="alpha|max:25"
                     />
                   </FirstNameDiv>
                   <div>
-                    <label for="phone">Phone Number</label>
+                    <Label for="phone">Phone Number</Label>
                     <HeaderInput
                       name="phone"
-                      placeholder="Your phone number"
+                      placeholder="(123) 456 - 7890"
                       rules="required|regex:/^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}$"
                     />
                   </div>
@@ -172,7 +172,7 @@ const Flex = styled.div`
   padding-top: 5%;
   justify-content: space-between;
   align-content: center;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 40% 60% 10% 1fr 1fr;
   @media (max-width: ${props => props.theme.screen.md}) {
     grid-template-columns: 1fr;
     grid-gap: 64px;
@@ -182,17 +182,19 @@ const Flex = styled.div`
 const FirstNameDiv = styled.div`
 padding-right: 10%;
 `
+const Label = styled.div` 
+  color: black;
+  `
 
 const FormConatiner = styled.div`
   display: flex;
   flex-direction: column;
   margin: 10px;
+  width:
 `
 const InputsContainer = styled.div`
   display: flex;
   flex-direction: row;
-  padding: 10px;
-  margin: 10px;
 `
 const SubmitContainer = styled.div`
   display: flex;
@@ -215,17 +217,17 @@ const HeaderForm = styled.form`
 const HeaderInput = styled.input`
   font-weight: 500;
   font-size: 16px;
-  color: ${props => props.theme.color.primary};
+  color: grey;
   line-height: 42px;
   width: 100%;
   text-align: left;
-  height: 60px;
+  height: 37px;
   border-width: 1px;
   border-style: solid;
-  border-color: ${props => props.theme.color.secondary};
+  border-color: grey;
   border-image: initial;
-  border-radius: 4px;
-  padding: 8px 16px;
+  border-radius: 10px;
+  padding: 4px 8px;
   outline: 0px;
   &:focus {
     box-shadow: inset ${props => props.theme.color.secondary} 0px 0px 0px 2px;
@@ -240,21 +242,24 @@ const HeaderInput = styled.input`
 `
 
 const HeaderButton = styled.button`
-  font-weight: 500;
-  font-size: 14px;
+  
+  font-weight: 700;
+  font-size: 24px;
   color: white;
   letter-spacing: 1px;
-  height: 60px;
+  height: 54px;
+  width: 100%;
   display: block;
   margin-left: 8px;
   text-transform: uppercase;
   cursor: pointer;
   white-space: nowrap;
   background: ${props => props.theme.color.secondary};
-  border-radius: 4px;
+  border-radius: 5px;
   padding: 0px 40px;
   border-width: 0px;
   border-style: initial;
+  transform: translate(-19px, 5px);
   border-color: initial;
   border-image: initial;
   outline: 0px;
@@ -287,6 +292,7 @@ const StyledImage = styled(Img)`
 `
 
 const StyledImage1 = styled(Img)`
+  padding-right: 5%;
   width: 250px;
   margin-bottom: 55px;
   @media (max-width: ${props => props.theme.screen.md}) {

@@ -90,16 +90,16 @@ const Header = () => {
             >
               <FormConatiner>
                 <InputsContainer>
-                  <div>
-                    <label for="name">Your First Name</label>
+                  <FirstNameDiv>
+                    <label for="name">YOUR First Name</label>
                     <HeaderInput
                       name="name"
-                      placeholder="Your first name"
+                      placeholder="First Name"
                       rules="alpha|max:25"
                     />
-                  </div>
+                  </FirstNameDiv>
                   <div>
-                    <label for="phone">Your Phone Number</label>
+                    <label for="phone">Phone Number</label>
                     <HeaderInput
                       name="phone"
                       placeholder="Your phone number"
@@ -115,7 +115,6 @@ const Header = () => {
           </HeaderTextGroup>
           <ImageWrapper>
             <StyledImage fluid={iphone_img} />
-            
           </ImageWrapper>
         </Flex>
       </Container>
@@ -169,6 +168,8 @@ const BackgroundS = styled(Background)``
 
 const Flex = styled.div`
   display: grid;
+  grid-gap: 30%;
+  padding-top: 5%;
   justify-content: space-between;
   align-content: center;
   grid-template-columns: 1fr 1fr;
@@ -176,6 +177,10 @@ const Flex = styled.div`
     grid-template-columns: 1fr;
     grid-gap: 64px;
   }
+`
+
+const FirstNameDiv = styled.div`
+padding-right: 10%;
 `
 
 const FormConatiner = styled.div`
@@ -271,7 +276,7 @@ const ImageWrapper = styled.div`
 `
 
 const StyledImage = styled(Img)`
-  width: 500px;
+  width: 800px;
   @media (max-width: ${props => props.theme.screen.md}) {
     width: 400px;
   }

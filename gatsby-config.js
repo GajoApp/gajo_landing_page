@@ -15,9 +15,16 @@ module.exports = {
       resolve: "gatsby-plugin-react-svg",
       options: {
         rule: {
-          
-          include: /assets/ // See below to configure properly
+          include: /\.inline\.svg$/,
+          // include: /assets/ // See below to configure properly
         },
+      },
+    },
+    {
+      resolve: "gatsby-background-image-es5",
+      options: {
+        // add your own characters to escape, replacing the default ':/'
+        specialChars: "/:",
       },
     },
     // {

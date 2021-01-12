@@ -3,7 +3,7 @@ import "./background.css"
 
 export default function Background() {
   return (
- <svg className="background" width="1440" height="900" viewBox="0 0 1440 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+ <svg preserveAspectRatio="none" className="background"  viewBox="0 0 1440 900" fill="none" xmlns="http://www.w3.org/2000/svg">
   <g clip-path="url(#clip0)">
   <rect width="1440" height="900" fill="white"/>
   <rect width="1440" height="900" fill="#4FB286"/>

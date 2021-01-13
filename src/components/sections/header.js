@@ -63,13 +63,12 @@ const Header = () => {
 
   return (
     <HeaderWrapper id="top">
-      <BackgroundS /> 
+      <BackgroundS />
       <Container>
         <Flex>
           <HeaderTextGroup>
             <ImageWrapper>
-              
-              <GajoLogo  />
+              <GajoLogo />
               <br />
             </ImageWrapper>
             <h1>
@@ -101,7 +100,7 @@ const Header = () => {
                     <Label for="phone">Phone Number</Label>
                     <HeaderInput
                       name="phone"
-                      placeholder="(123) 456 - 7890"
+                      placeholder="(123) 456-7890"
                       rules="required|regex:/^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}$"
                     />
                   </div>
@@ -183,17 +182,17 @@ const Flex = styled.div`
 `
 
 const FirstNameDiv = styled.div`
-padding-right: 10%;
+  padding-right: 10%;
 `
-const Label = styled.div` 
+const Label = styled.div`
   color: black;
-  `
+`
 
 const FormConatiner = styled.div`
   display: flex;
   flex-direction: column;
   margin: 10px;
-  width:
+  width: ;
 `
 const InputsContainer = styled.div`
   display: flex;
@@ -232,6 +231,10 @@ const HeaderInput = styled.input`
   border-radius: 10px;
   padding: 4px 8px;
   outline: 0px;
+  ::placeholder {
+    color: grey;
+    opacity: 0.3;
+  }
   &:focus {
     box-shadow: inset ${props => props.theme.color.secondary} 0px 0px 0px 2px;
   }
@@ -245,7 +248,6 @@ const HeaderInput = styled.input`
 `
 
 const HeaderButton = styled.button`
-  
   font-weight: 500;
   font-size: 24px;
   font-family: Karla;

@@ -4,8 +4,9 @@ import { graphql, useStaticQuery, Link } from "gatsby"
 import Img from "gatsby-image"
 import kwesforms from "kwesforms"
 import { Container } from "../global"
-import Background from "../common/layout/background"
-// import background from "../../assets/background.svg"
+import Background from "../common/svgs/background"
+import GajoLogo from "../common/svgs/gajo_logo"
+import "@fontsource/karla"
 
 const Header = () => {
   const data = useStaticQuery(graphql`
@@ -27,7 +28,6 @@ const Header = () => {
   `)
   let gajo_logo
   let iphone_img
-  let background
   data.allFile.edges.map(edge => console.log(edge))
   data.allFile.edges.map(edge => {
     // console.log(edge.node.relativePath)
@@ -35,8 +35,6 @@ const Header = () => {
       iphone_img = edge.node.childImageSharp.fluid
     } else if (edge.node.relativePath === "gajo_logo.png") {
       gajo_logo = edge.node.childImageSharp.fluid
-    } else if (edge.node.relativePath === "background.png") {
-      background = edge.node.childImageSharp.fluid
     }
   })
 
@@ -70,7 +68,8 @@ const Header = () => {
         <Flex>
           <HeaderTextGroup>
             <ImageWrapper>
-              <StyledImage1 fluid={gajo_logo} />
+              
+              <GajoLogo  />
               <br />
             </ImageWrapper>
             <h1>
@@ -80,10 +79,10 @@ const Header = () => {
               <br />
               boring.
             </h1>
-            <h2>
+            <p>
               Sign up today to stay in touch and see when we launch! 🚀 We
               promise we won’t spam.
-            </h2>
+            </p>
             <HeaderForm
               className="kwes-form"
               action="https://kwes.io/api/foreign/forms/sWHosqzNcJWrSLP8Zilf"
@@ -150,6 +149,7 @@ const HeaderTextGroup = styled.div`
     color: ${props => props.theme.color.primary};
     font-family: Karla;
     font-style: normal;
+    font-weight: 700;
   }
 
   h2 {
@@ -159,8 +159,11 @@ const HeaderTextGroup = styled.div`
   }
 
   p {
-    margin-bottom: 48px;
+    margin-bottom: 38px;
     color: black;
+    font-family: Karla;
+    font-style: normal;
+    font-weight: 400;
   }
 `
 
@@ -243,9 +246,11 @@ const HeaderInput = styled.input`
 
 const HeaderButton = styled.button`
   
-  font-weight: 700;
+  font-weight: 500;
   font-size: 24px;
+  font-family: Karla;
   color: white;
+  line-height: 28px;
   letter-spacing: 1px;
   height: 54px;
   width: 100%;
@@ -291,10 +296,8 @@ const StyledImage = styled(Img)`
   }
 `
 
-const StyledImage1 = styled(Img)`
-  padding-right: 5%;
+const StyledImage1 = styled(GajoLogo)`
   width: 250px;
-  margin-bottom: 55px;
   @media (max-width: ${props => props.theme.screen.md}) {
     width: 400px;
   }
@@ -302,151 +305,3 @@ const StyledImage1 = styled(Img)`
     width: 150px;
   }
 `
-// const RightCornerCurve = styled.div`
-//   /* Vector 21 */
-
-//   position: absolute;
-//   width: 145.55px;
-//   height: 121.35px;
-//   left: 1462.52px;
-//   top: -26.87px;
-
-//   opacity: 0.3;
-//   border: 20px solid #61daa4;
-//   transform: matrix(-1, 0, 0, 1, 0, 0);
-// `
-
-// const CornerCurve = styled.div`
-//   z-index: -1;
-//   background: white;
-//   position: absolute;
-//   height: 97%;
-//   width: 100%;
-//   transform: translate(20%, -18%);
-//   clip-path: url(#curveFigma);
-// `
-
-// const AcrossFigma = styled.div`
-//   z-index: -1;
-//   background: #3c896d;
-//   position: absolute;
-//   height: 97%;
-//   width: 50%;
-//   transform: translate(100%, 20%);
-//   clip-path: url(#acrossFigma);
-// `
-
-// const LeftRectangle = styled.div`
-//   /* Rectangle 66 */
-
-//   position: absolute;
-//   width: 35%;
-//   height: 150%;
-//   // left: 592px;
-//   // top: 0px;
-
-//   background: white;
-//   transform: rotate(-35deg) translate(33%, -20%);
-//   // transform: matrix(-1, 0, 0, 1, 0, 0);
-// `
-
-// const LeftGreenCurve = styled.div`
-//   /* Vector */
-//   z-index: -2;
-//   position: absolute;
-//   width: 100%;
-//   height: 70%;
-//   // left: 1437px;
-//   // top: 256px;
-
-//   background: linear-gradient(
-//     127.33deg,
-//     rgba(42, 221, 156, 0) 37.16%,
-//     #29e19e 70.79%
-//   );
-//   opacity: 0.5;
-//   transform: translate(20%, 20%);
-//   // transform: matrix(-1, 0, 0, 1, 0, 0);
-// `
-// const CurvyBackground = styled.div`
-//   // margin-top: -100px;
-//   z-index: -1;
-//   transform-origin: right bottom; /* or 100% 100%, same thing */
-//   transform: rotate(-120deg) translate(3%, -25%); /* go from bottom right to top right */
-
-//   background: white;
-//   position: absolute;
-//   height: 30%;
-//   width: 15%;
-//   clip-path: url(#wave);
-// `
-// const AcrossCurve = styled.div`
-// /* Vector */
-// z-index: 1;
-// position: absolute;
-// width: 700%;
-// height: 70%;
-// // left: 1437px;
-// // top: 256px;
-
-// background: red;
-// opacity: 0.5;
-// transform: translate(-10%, -20%);
-// // transform: matrix(-1, 0, 0, 1, 0, 0);
-
-// `
-
-// const CurvyBackground = styled.div`
-// // margin-top: -100px;
-// z-index: -1;
-// transform-origin: right bottom; /* or 100% 100%, same thing */
-// transform:
-//   rotate(65deg)
-//   translate(6%, 120%); /* go from bottom right to top right */
-
-// background: white;
-// position: absolute;
-// height: 70%;
-// width: 70%;
-// clip-path: url(#wave);
-// `
-
-// const CurvyBackground2 = styled.div`
-// // margin-top: -100px;
-// z-index: -1;
-// transform-origin: right bottom; /* or 100% 100%, same thing */
-// transform:
-//   rotate(-120deg)
-//   translate(4%, 10%); /* go from bottom right to top right */
-
-// background: white;
-// position: absolute;
-// height: 30%;
-// width: 20%;
-// clip-path: url(#wave);
-// `
-
-// const CurvyBackground4 = styled.div`
-// // margin-top: -100px;
-// z-index: -1;
-// transform-origin: right bottom; /* or 100% 100%, same thing */
-// transform:
-//   rotate(90deg)
-//   translate(-20%, 200%); /* go from bottom right to top right */
-
-// background: white;
-// position: absolute;
-// height: 30%;
-// width: 30%;
-// clip-path: url(#wave);
-// `
-// const Background_image = styled.div`
-//   background-color: #3c896d;
-//   z-index: 2;
-//   padding: 160px 0 80px 0;
-//   // position: relative;
-//   clip-path: url(../../images/assets/background.svg);
-//   // background-size: contain;
-//   @media (max-width: ${props => props.theme.screen.md}) {
-//   }
-// `

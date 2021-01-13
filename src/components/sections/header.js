@@ -5,6 +5,7 @@ import Img from "gatsby-image"
 import kwesforms from "kwesforms"
 import { Container } from "../global"
 import Background from "../common/svgs/background"
+import BackgroundDecider from "../common/svgs/background_decider"
 import GajoLogo from "../common/svgs/gajo_logo"
 import "@fontsource/karla"
 
@@ -166,7 +167,7 @@ const HeaderTextGroup = styled.div`
   }
 `
 
-const BackgroundS = styled(Background)``
+const BackgroundS = styled(BackgroundDecider)``
 
 const Flex = styled.div`
   display: grid;
@@ -293,8 +294,9 @@ const StyledImage = styled(Img)`
     width: 400px;
   }
   @media (max-width: ${props => props.theme.screen.sm}) {
-    width: 300px;
-    display: none;
+    width: 400px;
+    position: fixed;
+    top: 25%;
   }
 `
 

@@ -55,8 +55,11 @@ export default function Mobile(props) {
                 </ImageWrapper>
             </ImageWrapperPhone>
             <p>
-              Sign up today to stay in touch and see when we launch! 🚀 We
-              promise we won’t spam.
+              Sign up today to stay in touch and see 
+              <br />
+              when we launch! 🚀 We promise we 
+              <br />
+              won’t spam.
             </p>
             <HeaderForm
               className="kwes-form"
@@ -91,17 +94,9 @@ export default function Mobile(props) {
     )
 }
 
-const HeaderWrapper = styled.header`
-  // background-color: #f8f8f8;
-  // padding: 0 0 0 0;
-  // z-index: -1;
-  position: relative;
-  @media (max-width: ${props => props.theme.screen.md}) {
-  }
-`
-
 const HeaderTextGroup = styled.div`
   margin: 0;
+  padding-left: 5%;
 
   > div {
     width: 120%;
@@ -127,6 +122,7 @@ const HeaderTextGroup = styled.div`
   }
 
   p {
+    margin-top: 20%;
     margin-bottom: 38px;
     color: black;
     font-family: Karla;

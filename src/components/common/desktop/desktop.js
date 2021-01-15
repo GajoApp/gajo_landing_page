@@ -2,6 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import { graphql, useStaticQuery, Link } from "gatsby"
 import Img from "gatsby-image"
+import { Container } from "../../global"
 import kwesforms from "kwesforms"
 import GajoLogo from "../svgs/gajo_logo"
 import "@fontsource/karla"
@@ -36,6 +37,7 @@ export default function Desktop(props) {
       }
     })
     return(
+      <Container>
         <Flex>
           <HeaderTextGroup>
             <ImageWrapper>
@@ -86,17 +88,9 @@ export default function Desktop(props) {
             <StyledImage fluid={iphone_img} />
           </ImageWrapper>
         </Flex>
+      </Container>
     )
 }
-
-const HeaderWrapper = styled.header`
-  // background-color: #f8f8f8;
-  // padding: 0 0 0 0;
-  // z-index: -1;
-  position: relative;
-  @media (max-width: ${props => props.theme.screen.md}) {
-  }
-`
 
 const HeaderTextGroup = styled.div`
   margin: 0;

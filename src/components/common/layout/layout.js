@@ -7,11 +7,9 @@ import "../../../static/fonts/fonts.css"
 
 const Layout = ({ children }) => (
   <ThemeProvider theme={theme}>
-    <>
       {/* <CornerCurve /> */}
       <GlobalStyles />
       {children}
-    </>
   </ThemeProvider>
 )
 

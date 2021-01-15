@@ -1,8 +1,9 @@
 // Theme
+import "@fontsource/karla/700.css"
 
 const theme = {
   font: {
-    primary: `'Karla Normal'`,
+    primary: `'Karla, sans-serif;'`,
     secondary: `'HK Grotesk Medium'`,
     light: `'HK Grotesk Light'`,
     normal: `'HK Grotesk Normal'`,

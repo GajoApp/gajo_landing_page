@@ -3,7 +3,7 @@ import styled from "styled-components"
 export const Container = styled.div`
   max-width: 1200px;
   width: 100%;
-  margin: 0 auto;
+  margin: 0 10%;
   padding: 0 16px;
 
   @media (min-width: ${props => props.theme.screen.xs}) {

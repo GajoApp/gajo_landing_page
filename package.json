@@ -2,7 +2,11 @@
   "name": "GajoApp",
   "private": true,
   "description": "Gajo landing page",
+<<<<<<< HEAD
   "version": "0.1.0",
+=======
+  "version": "1.0.0",
+>>>>>>> main
   "author": "Rami Parsa Sujude",
   "dependencies": {
     "@fontsource/karla": "^4.1.0",

@@ -6,8 +6,8 @@ module.exports = {
   siteMetadata: {
     title: `Gajo`,
     description: `making exploring careers fun.`,
-    author: `Sujude Rami Parsa`,
-    siteUrl: gajoapp.io
+    author: `Sujude Rami Parsa`
+    // siteUrl: gajoapp.io
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

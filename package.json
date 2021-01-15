@@ -2,7 +2,7 @@
   "name": "GajoApp",
   "private": true,
   "description": "Gajo landing page",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "author": "Rami Parsa Sujude",
   "dependencies": {
     "@fontsource/karla": "^4.1.0",
@@ -29,7 +29,8 @@
     "styled-components": "^5.1.1"
   },
   "devDependencies": {
-    "prettier": "^2.0.5"
+    "prettier": "^2.0.5",
+    "gh-pages": "^3.1.0"
   },
   "keywords": [
     "gatsby"
@@ -41,7 +42,8 @@
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "start": "npm run develop",
     "serve": "gatsby serve",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing \""
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing \"",
+    "deploy": "gatsby build --prefix-paths && gh-pages -d public"
   },
   "repository": {
     "type": "git",

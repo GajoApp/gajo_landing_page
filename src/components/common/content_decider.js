@@ -14,7 +14,7 @@ import "@fontsource/karla"
 export default function ContentDecider(props) {
     let small = 767
     console.log("Printing props: ", props.props)
-    if (props.props > 400) {
+    if (props.props > small) {
       console.log("Inside Desktop",props)
       return <Desktop/> 
     } else {

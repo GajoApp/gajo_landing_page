@@ -151,6 +151,7 @@ const FirstNameDiv = styled.div`
 `
 const Label = styled.div`
   color: black;
+  font-family: Karla;
 `
 
 const FormConatiner = styled.div`
@@ -262,11 +263,16 @@ const ImageWrapperPhone = styled.div`
 `
 
 const StyledImage = styled(Img)`
-  width: 800px;
-  @media (max-width: ${props => props.theme.screen.md}) {
+  @media (max-width: 1848px) {
+    width: 800px;
+  }
+  @media (max-width: 1199px) {
+    width: 600px;
+  }
+  @media (max-width: 991px) {
     width: 400px;
   }
-  @media (max-width: ${props => props.theme.screen.sm}) {
+  @media (max-width: 767px) {
     width: 400px;
     position: fixed;
     top: 25%;

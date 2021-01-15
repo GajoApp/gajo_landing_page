@@ -4,13 +4,13 @@ import "@fontsource/karla/700.css"
 const theme = {
   font: {
     primary: `'Karla, sans-serif;'`,
-    secondary: `'HK Grotesk Medium'`,
-    light: `'HK Grotesk Light'`,
-    normal: `'HK Grotesk Normal'`,
-    medium: `'HK Grotesk Medium'`,
-    semibold: `'HK Grotesk Semibold'`,
-    bold: `'HK Grotesk Bold'`,
-    extrabold: `'HK Grotesk Extra Bold'`,
+    secondary: `'Karla, sans-serif;'`,
+    light: `'Karla, sans-serif;'`,
+    normal: `''Karla, sans-serif;'`,
+    medium: `'Karla, sans-serif;'`,
+    semibold: `'Karla, sans-serif;'`,
+    bold: `'Karla, sans-serif;'`,
+    extrabold: `'Karla, sans-serif;'`,
   },
   font_size: {
     xxxsmall: "font-size: 12px;",

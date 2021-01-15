@@ -23,7 +23,7 @@ export default function BackgroundDecider(props) {
   //   lg: "1199",
   // }
   console.log("Printing props: ", props.props)
-  if (props.props > 400) {
+  if (props.props > small) {
     console.log("Inside Desktop",props)
     return <Background />
   } else {

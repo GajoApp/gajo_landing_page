@@ -131,14 +131,25 @@ const HeaderTextGroup = styled.div`
 
 const Flex = styled.div`
   display: grid;
-  grid-gap: 30%;
   padding-top: 5%;
   justify-content: space-between;
   align-content: center;
   grid-template-columns: 40% 60% 10% 1fr 1fr;
-  @media (max-width: ${props => props.theme.screen.md}) {
-    grid-template-columns: 1fr;
-    grid-gap: 64px;
+  @media (max-width: 1848px) {
+    // grid-template-columns: 1fr;
+    grid-gap: 30%;
+  }
+  @media (max-width: 1199px) {
+    // grid-template-columns: 1fr;
+    grid-gap: 25%;
+  }
+  @media (max-width: 991px) {
+    // grid-template-columns: 1fr;
+    grid-gap: 0%;
+  }
+  @media (max-width: 767px) {
+    // grid-template-columns: 1fr;
+    grid-gap: 15%;
   }
 `
 
@@ -147,6 +158,7 @@ const FirstNameDiv = styled.div`
 `
 const Label = styled.div`
   color: black;
+  font-family: Karla;
 `
 
 const FormConatiner = styled.div`
@@ -249,14 +261,18 @@ const ImageWrapper = styled.div`
 `
 
 const StyledImage = styled(Img)`
-  width: 800px;
-  @media (max-width: ${props => props.theme.screen.md}) {
+  // width: 800px;
+  @media (max-width: 1848px) {
+    width: 800px;
+  }
+  @media (max-width: 1199px) {
+    width: 600px;
+  }
+  @media (max-width: 991px) {
     width: 400px;
   }
-  @media (max-width: ${props => props.theme.screen.sm}) {
-    width: 400px;
-    position: fixed;
-    top: 25%;
+  @media (max-width: 767px) {
+    width: 200px;
   }
 `
 

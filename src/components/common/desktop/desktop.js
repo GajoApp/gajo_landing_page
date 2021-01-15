@@ -1,17 +1,13 @@
-import React, { useEffect, useState } from "react"
+import React from "react"
 import styled from "styled-components"
 import { graphql, useStaticQuery, Link } from "gatsby"
 import Img from "gatsby-image"
 import kwesforms from "kwesforms"
-import { Container } from "../global"
-import Background from "../common/svgs/background"
-import BackgroundDecider from "../common/svgs/background_decider"
-import ContentDecider from "../common/content_decider"
-import GajoLogo from "../common/svgs/gajo_logo"
+import GajoLogo from "../svgs/gajo_logo"
 import "@fontsource/karla"
 
-const Header = () => {
-  const data = useStaticQuery(graphql`
+export default function Desktop(props) {
+    const data = useStaticQuery(graphql`
     query {
       allFile(filter: { absolutePath: { regex: "/product/" } }) {
         edges {
@@ -28,54 +24,19 @@ const Header = () => {
       }
     }
   `)
-  let gajo_logo
-  let iphone_img
-  data.allFile.edges.map(edge => console.log(edge))
-  data.allFile.edges.map(edge => {
-    // console.log(edge.node.relativePath)
-    if (edge.node.relativePath === "green-skew.png") {
-      iphone_img = edge.node.childImageSharp.fluid
-    } else if (edge.node.relativePath === "gajo_logo.png") {
-      gajo_logo = edge.node.childImageSharp.fluid
-    }
-  })
-
-  //   file(sourceInstanceName: { eq: "product" }, name: { eq: "green-skew" }) {
-  //     childImageSharp {
-  //       fluid(maxWidth: 1000) {
-  //         ...GatsbyImageSharpFluid_tracedSVG
-  //       }
-  //     }
-  //   }
-  // },
-  // file(sourceInstanceName: { eq: "product" }, name: { eq: "gajo-logo" }) {
-  //   childImageSharp {
-  //     fluid(maxWidth: 1000) {
-  //       ...GatsbyImageSharpFluid_tracedSVG
-  //     }
-  //   }
-  // }
-  let [iw, setIw] = useState(null)
-  useEffect(() => {
-    if (window.location.hostname === "localhost") {
-      console.log("I'm on localhost")
-    }
-    console.log(window.navigator.userAgent)
-    let iOS =
-      /iPad|iPhone|iPod/.test(window.navigator.userAgent) && !window.MSStream
-    iw = iOS ? window.screen.width : window.innerWidth
-    setIw(iw)
-    console.log(iw)
-    let ih = iOS ? window.screen.height : window.innerHeight
-    kwesforms.init()
-  },[iw])
-
-  return (
-    <HeaderWrapper id="top">
-      <BackgroundDecider props={iw}/>
-      <Container>
-        <ContentDecider props={iw}/>
-        {/* <Flex>
+    let gajo_logo
+    let iphone_img
+    data.allFile.edges.map(edge => console.log(edge))
+    data.allFile.edges.map(edge => {
+      // console.log(edge.node.relativePath)
+      if (edge.node.relativePath === "green-skew.png") {
+        iphone_img = edge.node.childImageSharp.fluid
+      } else if (edge.node.relativePath === "gajo_logo.png") {
+        gajo_logo = edge.node.childImageSharp.fluid
+      }
+    })
+    return(
+        <Flex>
           <HeaderTextGroup>
             <ImageWrapper>
               <GajoLogo />
@@ -124,13 +85,9 @@ const Header = () => {
           <ImageWrapper>
             <StyledImage fluid={iphone_img} />
           </ImageWrapper>
-        </Flex> */}
-      </Container>
-    </HeaderWrapper>
-  )
+        </Flex>
+    )
 }
-
-export default Header
 
 const HeaderWrapper = styled.header`
   // background-color: #f8f8f8;
@@ -176,7 +133,7 @@ const HeaderTextGroup = styled.div`
   }
 `
 
-const BackgroundS = styled(BackgroundDecider)``
+// const BackgroundS = styled(BackgroundDecider)``
 
 const Flex = styled.div`
   display: grid;

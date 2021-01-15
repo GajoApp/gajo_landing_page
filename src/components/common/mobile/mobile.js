@@ -22,34 +22,29 @@ import {
   HeaderTextGroup} from "../../../styles/gajoStyles"
 
 export default function Mobile(props) {
-    const data = useStaticQuery(graphql`
-    query {
-      allFile(filter: { absolutePath: { regex: "/product/" } }) {
-        edges {
-          node {
-            id
-            relativePath
-            childImageSharp {
-              fluid(maxWidth: 1000) {
-                ...GatsbyImageSharpFluid_tracedSVG
-              }
-            }
+  const data = useStaticQuery(graphql`
+  query {
+      file(sourceInstanceName: { eq: "product" }, name: { eq: "green-skew" }) {
+        childImageSharp {
+          fluid(maxWidth: 1000) {
+            ...GatsbyImageSharpFluid_tracedSVG
           }
         }
       }
     }
-  `)
-    let gajo_logo
-    let iphone_img
-    data.allFile.edges.map(edge => console.log(edge))
-    data.allFile.edges.map(edge => {
-      // console.log(edge.node.relativePath)
-      if (edge.node.relativePath === "green-skew.png") {
-        iphone_img = edge.node.childImageSharp.fluid
-      } else if (edge.node.relativePath === "gajo_logo.png") {
-        gajo_logo = edge.node.childImageSharp.fluid
-      }
-    })
+`)
+let iphone_img = data.file.childImageSharp.fluid
+    // let gajo_logo
+    // let iphone_img
+    // data.allFile.edges.map(edge => console.log(edge))
+    // data.allFile.edges.map(edge => {
+    //   // console.log(edge.node.relativePath)
+    //   if (edge.node.relativePath === "green-skew.png") {
+    //     iphone_img = edge.node.childImageSharp.fluid
+    //   } else if (edge.node.relativePath === "gajo_logo.png") {
+    //     gajo_logo = edge.node.childImageSharp.fluid
+    //   }
+    // })
     return(
         <Flex>
           <HeaderTextGroup>

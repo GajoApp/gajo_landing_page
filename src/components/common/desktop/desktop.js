@@ -35,17 +35,7 @@ export default function Desktop(props) {
     }
   `)
   let iphone_img = data.file.childImageSharp.fluid
-  // let gajo_logo
-  // let iphone_img
-  // data.allFile.edges.map(edge => console.log(edge))
-  // data.allFile.edges.map(edge => {
-  //   // console.log(edge.node.relativePath)
-  //   if (edge.node.relativePath === "green-skew.png") {
-  //     iphone_img = edge.node.childImageSharp.fluid
-  //   } else if (edge.node.relativePath === "gajo_logo.png") {
-  //     gajo_logo = edge.node.childImageSharp.fluid
-  //   }
-  // })
+
   return (
     <Container>
       <Flex>

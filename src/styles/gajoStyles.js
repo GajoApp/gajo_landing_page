@@ -2,7 +2,6 @@ import styled from "styled-components"
 import GajoLogo from "../components/common/svgs/gajo_logo"
 import Img from "gatsby-image"
 
-
 const HeaderTextGroup = styled.div`
   margin: 0;
 
@@ -30,7 +29,7 @@ const HeaderTextGroup = styled.div`
   }
 
   p {
-    margin-bottom: 38px;
+    margin-bottom: 10%;
     color: black;
     font-family: Karla;
     font-style: normal;
@@ -45,22 +44,11 @@ const Flex = styled.div`
   padding-top: 5%;
   justify-content: space-between;
   align-content: center;
-  grid-template-columns: 40% 60% 10% 1fr 1fr;
-  @media (max-width: 1848px) {
-    // grid-template-columns: 1fr;
-    grid-gap: 30%;
-  }
-  @media (max-width: 1199px) {
-    // grid-template-columns: 1fr;
-    grid-gap: 25%;
-  }
-  @media (max-width: 991px) {
-    // grid-template-columns: 1fr;
+  grid-template-columns: 40% 40% auto 1fr 1fr;
+  grid-gap: 15%;
+  @media (max-width: ${props => props.theme.screen.sm}) {
+    grid-template-columns: 1fr;
     grid-gap: 0%;
-  }
-  @media (max-width: 767px) {
-    // grid-template-columns: 1fr;
-    grid-gap: 15%;
   }
 `
 const ImageWrapperPhone = styled.div`
@@ -172,7 +160,7 @@ const HeaderButton = styled.button`
   }
 `
 const ImageWrapper = styled.div`
-  justify-self: end;
+  width: 90%;
   align-self: center;
   @media (max-width: ${props => props.theme.screen.md}) {
     justify-self: center;
@@ -180,20 +168,20 @@ const ImageWrapper = styled.div`
 `
 
 const StyledImage = styled(Img)`
-  // width: 800px;
-  @media (max-width: 1848px) {
-    right: 70px;
-    width: 800px;
-  }
-  @media (max-width: 1199px) {
-    width: 600px;
-  }
-  @media (max-width: 991px) {
-    width: 400px;
-  }
-  @media (max-width: 767px) {
-    width: 200px;
-  }
+  width: 50%;
+  // @media (max-width: 1848px) {
+  //   right: 70px;
+  //   width: 800px;
+  // }
+  // @media (max-width: 1199px) {
+  //   width: 600px;
+  // }
+  // @media (max-width: 991px) {
+  //   width: 400px;
+  // }
+  // @media (max-width: 767px) {
+  //   width: 200px;
+  // }
 `
 
 const StyledImage1 = styled(GajoLogo)`
@@ -206,4 +194,19 @@ const StyledImage1 = styled(GajoLogo)`
   }
 `
 
-export {ImageWrapperPhone, StyledImage1, StyledImage, ImageWrapper, HeaderButton, HeaderInput, HeaderForm, SubmitContainer, InputsContainer, FormConatiner, Label, FirstNameDiv, Flex, HeaderTextGroup}
+export {
+  ImageWrapperPhone,
+  StyledImage1,
+  StyledImage,
+  ImageWrapper,
+  HeaderButton,
+  HeaderInput,
+  HeaderForm,
+  SubmitContainer,
+  InputsContainer,
+  FormConatiner,
+  Label,
+  FirstNameDiv,
+  Flex,
+  HeaderTextGroup,
+}

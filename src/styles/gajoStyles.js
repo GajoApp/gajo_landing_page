@@ -20,6 +20,9 @@ const HeaderTextGroup = styled.div`
     font-family: Karla;
     font-style: normal;
     font-weight: 700;
+    @media (max-width: ${props => props.theme.screen.sm}) {
+        font-size: 2.25rem;
+      }
   }
 
   h2 {
@@ -34,6 +37,15 @@ const HeaderTextGroup = styled.div`
     font-family: Karla;
     font-style: normal;
     font-weight: 400;
+    padding-top: 30%;
+    @media (max-width: ${props => props.theme.screen.md}) {
+        font-size: 2.25rem;
+        padding-top: 0%;
+    }
+    @media (max-width: ${props => props.theme.screen.sm}) {
+        font-size: 1rem;
+        padding-top: 0%;
+    }
   }
 `
 
@@ -44,8 +56,16 @@ const Flex = styled.div`
   padding-top: 5%;
   justify-content: space-between;
   align-content: center;
-  grid-template-columns: 40% 40% auto 1fr 1fr;
-  grid-gap: 15%;
+  grid-template-columns: 40% 50%;
+  grid-gap: 45%;
+  @media (max-width: ${props => props.theme.screen.lg}) {
+    grid-template-columns: 1fr;
+    grid-gap: 30%;
+  }
+  @media (max-width: ${props => props.theme.screen.md}) {
+    grid-template-columns: 1fr;
+    grid-gap: 5%;
+  }
   @media (max-width: ${props => props.theme.screen.sm}) {
     grid-template-columns: 1fr;
     grid-gap: 0%;
@@ -53,19 +73,31 @@ const Flex = styled.div`
 `
 const ImageWrapperPhone = styled.div`
     padding-bottom: 40%
-//   justify-self: end;
-//   align-self: center;
-//   @media (max-width: ${props => props.theme.screen.md}) {
-//     justify-self: center;
-//   }
+    @media (max-width: ${props => props.theme.screen.md}) {
+        padding-bottom: 0%
+    }
+    @media (max-width: ${props => props.theme.screen.sm}) {
+        padding-bottom: 85%
+    }
 `
 
 const FirstNameDiv = styled.div`
   padding-right: 10%;
+  @media (max-width: ${props => props.theme.screen.md}) {
+    padding-right: 0%;
+  }
 `
 const Label = styled.div`
   color: black;
   font-family: Karla;
+  @media (max-width: ${props => props.theme.screen.md}) {
+    flex-direction: column;
+    font-size: 2.25rem;
+  }
+  @media (max-width: ${props => props.theme.screen.sm}) {
+    flex-direction: column;
+    font-size: 1rem;
+  }
 `
 
 const FormConatiner = styled.div`
@@ -77,6 +109,10 @@ const FormConatiner = styled.div`
 const InputsContainer = styled.div`
   display: flex;
   flex-direction: row;
+  @media (max-width: ${props => props.theme.screen.md}) {
+    flex-direction: column;
+  }
+  
 `
 const SubmitContainer = styled.div`
   display: flex;
@@ -161,27 +197,19 @@ const HeaderButton = styled.button`
 `
 const ImageWrapper = styled.div`
   width: 90%;
+  padding-bottom: 5%;
   align-self: center;
   @media (max-width: ${props => props.theme.screen.md}) {
     justify-self: center;
+    padding-bottom: 0%;
   }
 `
 
 const StyledImage = styled(Img)`
   width: 50%;
-  // @media (max-width: 1848px) {
-  //   right: 70px;
-  //   width: 800px;
-  // }
-  // @media (max-width: 1199px) {
-  //   width: 600px;
-  // }
-  // @media (max-width: 991px) {
-  //   width: 400px;
-  // }
-  // @media (max-width: 767px) {
-  //   width: 200px;
-  // }
+  @media (max-width: ${props => props.theme.screen.sm}) {
+    width: 80%;
+  }
 `
 
 const StyledImage1 = styled(GajoLogo)`

@@ -12,7 +12,7 @@ import GajoLogo from "../common/svgs/gajo_logo"
 import "@fontsource/karla"
 
 export default function ContentDecider(props) {
-    let small = 767
+    let small = 1100
     console.log("Printing props: ", props.props)
     if (props.props > small) {
       console.log("Inside Desktop",props)

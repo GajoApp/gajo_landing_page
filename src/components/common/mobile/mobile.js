@@ -20,6 +20,7 @@ import {
   FirstNameDiv, 
   Flex, 
   HeaderTextGroup} from "../../../styles/gajoStyles"
+import { Container } from "../../global"
 
 export default function Mobile(props) {
   const data = useStaticQuery(graphql`
@@ -36,24 +37,28 @@ export default function Mobile(props) {
 let iphone_img = data.file.childImageSharp.fluid
 
     return(
+      <Container>
         <Flex>
-          <HeaderTextGroup>
+          
             <ImageWrapper>
               <GajoLogoMobile />
               <br />
             </ImageWrapper>
+            <HeaderTextGroup>
             <h1>
-              Exploring careers MOBILE
+              Exploring careers
               <br />
               shouldn't be
               <br />
               boring.
             </h1>
+            </HeaderTextGroup>
             <ImageWrapperPhone>
                 <ImageWrapper>
                     <StyledImage fluid={iphone_img} />
                 </ImageWrapper>
             </ImageWrapperPhone>
+            <HeaderTextGroup>
             <p>
               Sign up today to stay in touch and see 
               <br />
@@ -91,6 +96,7 @@ let iphone_img = data.file.childImageSharp.fluid
             </HeaderForm>
           </HeaderTextGroup>
         </Flex>
+        </Container>
     )
 }
 

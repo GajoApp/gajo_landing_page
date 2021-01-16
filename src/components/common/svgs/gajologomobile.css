@@ -1,5 +1,7 @@
 .GajoLogoMobile {
-    width: 30%;
+    width: 40%;
+    position: relative;
+    right: 10%;
     height: auto;
     /* margin-bottom: 13%; */
   }

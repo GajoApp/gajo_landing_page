@@ -5,21 +5,32 @@ export const Container = styled.div`
   width: 100%;
   margin: 0 5%;
   padding: 0 16px;
+  // @media (min-width: ${props => props.theme.screen.xlg}) {
+  //   max-width: 1200px;
+  // }
 
-  @media (min-width: ${props => props.theme.screen.xs}) {
-    max-width: 540px;
+  @media (max-width: ${props => props.theme.screen.lg}) {
+    margin: 0 5%;
+    padding: 0 16px;
+    max-width: 1200px;
   }
 
-  @media (min-width: ${props => props.theme.screen.sm}) {
-    max-width: 720px;
-  }
-
-  @media (min-width: ${props => props.theme.screen.md}) {
+  @media (max-width: ${props => props.theme.screen.md}) {
+    margin: 0;
+    padding: 0 10%;
     max-width: 960px;
   }
 
-  @media (min-width: ${props => props.theme.screen.lg}) {
-    max-width: 1200px;
+  @media (max-width: ${props => props.theme.screen.sm}) {
+    margin: 0;
+    padding: 0 10%;
+    max-width: 720px;
+  }
+
+  @media (max-width: ${props => props.theme.screen.xs}) {
+    margin: 0;
+    padding: 0 10%;
+    max-width: 540px;
   }
 
   ${props =>

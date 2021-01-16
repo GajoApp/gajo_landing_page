@@ -6,7 +6,7 @@ import { useEffect, useRef } from "react"
 export default function BackgroundDecider(props) {
   let iw = useRef(null)
 
-  let small = 767
+  let small = 1100
   // useEffect(() => {
   //   console.log(window.navigator.userAgent)
   //   let iOS =

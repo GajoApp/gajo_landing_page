@@ -90,8 +90,9 @@ const ImageWrapperPhone = styled.div`
         padding-bottom: 0%
     }
     @media (max-width: ${props => props.theme.screen.sm}) {
-        display: flex;
+        
         padding-bottom: 35%;
+        display: flex;
         justify-content: center;
         align-items: center;
     }
@@ -154,12 +155,12 @@ const HeaderForm = styled.form`
 
 const HeaderInput = styled.input`
   font-weight: 500;
-  font-size: 16px;
+  font-size: 1.3rem;
   color: grey;
-  line-height: 42px;
+  line-height: 1.4rem;
   width: 100%;
   text-align: left;
-  height: 37px;
+  height: 2.5rem;
   border-width: 1px;
   border-style: solid;
   border-color: grey;
@@ -180,6 +181,9 @@ const HeaderInput = styled.input`
   @media (max-width: ${props => props.theme.screen.sm}) {
     display: block;
     width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 `
 

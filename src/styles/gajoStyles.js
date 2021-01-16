@@ -56,10 +56,10 @@ const Flex = styled.div`
   padding-top: 5%;
   justify-content: space-between;
   align-content: center;
-  grid-template-columns: 40% 50%;
+  grid-template-columns: 40% 40%;
   grid-gap: 45%;
   @media (max-width: ${props => props.theme.screen.lg}) {
-    grid-template-columns: 40% 50%;
+    grid-template-columns: 40% 40%;
     grid-gap: 30%;
   }
   @media (max-width: ${props => props.theme.screen.md}) {

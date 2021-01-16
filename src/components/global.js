@@ -4,7 +4,7 @@ export const Container = styled.div`
   max-width: 1200px;
   width: 100%;
   margin: 0;
-  padding: 0 10%;
+  padding: 0 0 0 5%;
 
   @media (max-width: ${props => props.theme.screen.lg}) {
     max-width: 1200px;

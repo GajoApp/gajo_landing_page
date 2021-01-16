@@ -25,6 +25,11 @@ const HeaderTextGroup = styled.div`
       padding-top: 0%;
       line-height: 3.65rem;
     }
+    @media (max-width: ${props => props.theme.screen.lg}) {
+      font-size: 3.0rem;
+      padding-top: 0%;
+      line-height: 2.95rem;
+    }
     @media (max-width: ${props => props.theme.screen.sm}) {
         font-size: 2.25rem;
       }
@@ -45,6 +50,10 @@ const HeaderTextGroup = styled.div`
     padding-top: 5%;
     @media (max-width: ${props => props.theme.screen.xlg}) {
       font-size: 2.0rem;
+      padding-top: 0%;
+    }
+    @media (max-width: ${props => props.theme.screen.lg}) {
+      font-size: 1.25rem;
       padding-top: 0%;
     }
     @media (max-width: ${props => props.theme.screen.md}) {
@@ -223,6 +232,10 @@ const ImageWrapper = styled.div`
   width: 90%;
   padding-bottom: 5%;
   align-self: center;
+  @media (max-width: ${props => props.theme.screen.lg}) {
+    justify-self: center;
+    padding-bottom: 0%;
+  }
   @media (max-width: ${props => props.theme.screen.md}) {
     justify-self: center;
     padding-bottom: 0%;

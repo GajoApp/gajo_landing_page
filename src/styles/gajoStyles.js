@@ -53,7 +53,7 @@ const HeaderTextGroup = styled.div`
     }
     @media (max-width: ${props => props.theme.screen.sm}) {
         font-size: 1rem;
-        padding-top: 0%;
+        padding-top: 10%;
     }
   }
 `

@@ -68,7 +68,7 @@ let iphone_img = data.file.childImageSharp.fluid
             </p>
             <HeaderForm
               className="kwes-form"
-              action="https://kwes.io/api/foreign/forms/sWHosqzNcJWrSLP8Zilf"
+              action="https://kwes.io/api/foreign/forms/kPeK9BTCz6WeeNnEtSIT"
             >
               <FormConatiner>
                 <InputsContainer>

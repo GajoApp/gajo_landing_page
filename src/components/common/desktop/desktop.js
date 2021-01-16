@@ -42,7 +42,6 @@ export default function Desktop(props) {
         <HeaderTextGroup>
           <ImageWrapper>
             <GajoLogo />
-            <br />
           </ImageWrapper>
           <h1>
             Exploring careers
@@ -57,7 +56,7 @@ export default function Desktop(props) {
           </p>
           <HeaderForm
             className="kwes-form"
-            action="https://kwes.io/api/foreign/forms/sWHosqzNcJWrSLP8Zilf"
+            action="https://kwes.io/api/foreign/forms/kPeK9BTCz6WeeNnEtSIT"
           >
             <FormConatiner>
               <InputsContainer>

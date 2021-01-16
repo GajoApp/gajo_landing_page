@@ -37,7 +37,7 @@ const HeaderTextGroup = styled.div`
     font-family: Karla;
     font-style: normal;
     font-weight: 400;
-    padding-top: 30%;
+    padding-top: 5%;
     @media (max-width: ${props => props.theme.screen.md}) {
         font-size: 2.25rem;
         padding-top: 0%;
@@ -59,7 +59,7 @@ const Flex = styled.div`
   grid-template-columns: 40% 50%;
   grid-gap: 45%;
   @media (max-width: ${props => props.theme.screen.lg}) {
-    grid-template-columns: 1fr;
+    grid-template-columns: 40% 50%;
     grid-gap: 30%;
   }
   @media (max-width: ${props => props.theme.screen.md}) {

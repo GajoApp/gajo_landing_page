@@ -47,7 +47,7 @@ const theme = {
     xs: "575px",
     sm: "767px",
     md: "1100px",
-    lg: "1199px",
+    lg: "1300px",
     xlg: "4000px",
   },
 }

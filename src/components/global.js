@@ -3,33 +3,22 @@ import styled from "styled-components"
 export const Container = styled.div`
   max-width: 1200px;
   width: 100%;
-  margin: 0 5%;
-  padding: 0 16px;
-  // @media (min-width: ${props => props.theme.screen.xlg}) {
-  //   max-width: 1200px;
-  // }
+  margin: 0;
+  padding: 0 10%;
 
   @media (max-width: ${props => props.theme.screen.lg}) {
-    margin: 0 5%;
-    padding: 0 16px;
     max-width: 1200px;
   }
 
   @media (max-width: ${props => props.theme.screen.md}) {
-    margin: 0;
-    padding: 0 10%;
     max-width: 960px;
   }
 
   @media (max-width: ${props => props.theme.screen.sm}) {
-    margin: 0;
-    padding: 0 10%;
     max-width: 720px;
   }
 
   @media (max-width: ${props => props.theme.screen.xs}) {
-    margin: 0;
-    padding: 0 10%;
     max-width: 540px;
   }
 

@@ -5,7 +5,7 @@ export default function SmallBackground() {
   return (
     <svg
       className="SmallBackground"
-      viewBox="0 0 375 1440"
+      viewBox="0 61 375 1440"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >

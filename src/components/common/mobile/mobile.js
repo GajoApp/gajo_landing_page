@@ -53,11 +53,11 @@ let iphone_img = data.file.childImageSharp.fluid
               boring.
             </h1>
             </HeaderTextGroup>
-            <ImageWrapperPhone>
-                <ImageWrapper>
-                    <StyledImage fluid={iphone_img} />
-                </ImageWrapper>
-            </ImageWrapperPhone>
+            <ImageWrapper> 
+              <ImageWrapperPhone>
+                <StyledImage fluid={iphone_img} />
+              </ImageWrapperPhone>
+            </ImageWrapper>
             <HeaderTextGroup>
             <p>
               Sign up today to stay in touch and see 

@@ -90,8 +90,10 @@ const ImageWrapperPhone = styled.div`
         padding-bottom: 0%
     }
     @media (max-width: ${props => props.theme.screen.sm}) {
-        padding-top: 20%;
+        display: flex;
         padding-bottom: 35%;
+        justify-content: center;
+        align-items: center;
     }
 `
 

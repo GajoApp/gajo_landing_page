@@ -6,6 +6,10 @@ export const Container = styled.div`
   margin: 0;
   padding: 0 0 0 5%;
 
+  @media (max-width: ${props => props.theme.screen.xlg}) {
+    max-width: 1500px;
+  }
+
   @media (max-width: ${props => props.theme.screen.lg}) {
     max-width: 1200px;
   }

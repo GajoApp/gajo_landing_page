@@ -20,6 +20,11 @@ const HeaderTextGroup = styled.div`
     font-family: Karla;
     font-style: normal;
     font-weight: 700;
+    @media (max-width: ${props => props.theme.screen.xlg}) {
+      font-size: 3.25rem;
+      padding-top: 0%;
+      line-height: 3.65rem;
+    }
     @media (max-width: ${props => props.theme.screen.sm}) {
         font-size: 2.25rem;
       }
@@ -38,6 +43,10 @@ const HeaderTextGroup = styled.div`
     font-style: normal;
     font-weight: 400;
     padding-top: 5%;
+    @media (max-width: ${props => props.theme.screen.xlg}) {
+      font-size: 2.0rem;
+      padding-top: 0%;
+    }
     @media (max-width: ${props => props.theme.screen.md}) {
         font-size: 2.25rem;
         padding-top: 0%;
@@ -58,6 +67,10 @@ const Flex = styled.div`
   align-content: center;
   grid-template-columns: 40% 40%;
   grid-gap: 45%;
+  @media (max-width: ${props => props.theme.screen.xlg}) {
+    grid-template-columns: 40% 40%;
+    grid-gap: 40%;
+  }
   @media (max-width: ${props => props.theme.screen.lg}) {
     grid-template-columns: 40% 40%;
     grid-gap: 30%;
@@ -105,6 +118,10 @@ const FormConatiner = styled.div`
   flex-direction: column;
   margin: 10px;
   width: ;
+  @media (max-width: ${props => props.theme.screen.xlg}) {
+    font-size: 1.5rem;
+    padding-top: 0%;
+  }
 `
 const InputsContainer = styled.div`
   display: flex;
@@ -207,6 +224,10 @@ const ImageWrapper = styled.div`
 
 const StyledImage = styled(Img)`
   width: 50%;
+  @media (max-width: ${props => props.theme.screen.xlg}) {
+
+    width: 65%
+  }
   @media (max-width: ${props => props.theme.screen.sm}) {
     width: 80%;
   }

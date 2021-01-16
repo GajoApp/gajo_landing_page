@@ -90,7 +90,8 @@ const ImageWrapperPhone = styled.div`
         padding-bottom: 0%
     }
     @media (max-width: ${props => props.theme.screen.sm}) {
-        padding-bottom: 85%
+        padding-top: 20%;
+        padding-bottom: 35%;
     }
 `
 
@@ -225,11 +226,10 @@ const ImageWrapper = styled.div`
 const StyledImage = styled(Img)`
   width: 50%;
   @media (max-width: ${props => props.theme.screen.xlg}) {
-
     width: 65%
   }
   @media (max-width: ${props => props.theme.screen.sm}) {
-    width: 80%;
+    width: 70%;
   }
 `
 

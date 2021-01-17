@@ -62,7 +62,7 @@ const HeaderTextGroup = styled.div`
     }
     @media (max-width: ${props => props.theme.screen.sm}) {
         font-size: 1rem;
-        padding-top: 10%;
+        padding-top: 17%;
     }
   }
 `
@@ -82,7 +82,7 @@ const Flex = styled.div`
   }
   @media (max-width: ${props => props.theme.screen.lgg}) {
     grid-template-columns: 40% 40%;
-    grid-gap: 30%;
+    grid-gap: 20%;
   }
   @media (max-width: ${props => props.theme.screen.lg}) {
     grid-template-columns: 40% 40%;

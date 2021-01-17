@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect } from "react"
 import styled from "styled-components"
 import { graphql, useStaticQuery, Link } from "gatsby"
 import Img from "gatsby-image"
@@ -35,6 +35,11 @@ export default function Mobile(props) {
       }
   `)
 let iphone_img = data.file.childImageSharp.fluid
+useEffect(() => {
+  window.analytics.track("User Load Mobile", {
+    user: "VisitedMobile"
+  });
+})
 
     return(
       <Container>

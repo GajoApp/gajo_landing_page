@@ -80,9 +80,13 @@ const Flex = styled.div`
     grid-template-columns: 40% 40%;
     grid-gap: 40%;
   }
-  @media (max-width: ${props => props.theme.screen.lg}) {
+  @media (max-width: ${props => props.theme.screen.lgg}) {
     grid-template-columns: 40% 40%;
     grid-gap: 30%;
+  }
+  @media (max-width: ${props => props.theme.screen.lg}) {
+    grid-template-columns: 40% 40%;
+    grid-gap: 25%;
   }
   @media (max-width: ${props => props.theme.screen.md}) {
     grid-template-columns: 1fr;

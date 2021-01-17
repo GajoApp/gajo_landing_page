@@ -48,6 +48,7 @@ const theme = {
     sm: "767px",
     md: "1100px",
     lg: "1300px",
+    lgg: "2500px",
     xlg: "4000px",
   },
 }

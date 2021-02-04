@@ -7,7 +7,6 @@ import GajoLogoMobile from "../svgs/gajo_logo_mobile"
 import "@fontsource/karla"
 import {
   ImageWrapperPhone,
-  StyledImage1,
   StyledImage,
   ImageWrapper,
   HeaderButton,
@@ -58,11 +57,11 @@ export default function Mobile(props) {
             boring.
           </h1>
         </HeaderTextGroup>
-        {/* <ImageWrapper>  */}
-        <ImageWrapperPhone>
-          <StyledImage fluid={iphone_img} />
-        </ImageWrapperPhone>
-        {/* </ImageWrapper> */}
+        <ImageWrapper>
+          <ImageWrapperPhone>
+            <StyledImage fluid={iphone_img} />
+          </ImageWrapperPhone>
+        </ImageWrapper>
         <HeaderTextGroup>
           <p>
             Sign up today to stay in touch and see

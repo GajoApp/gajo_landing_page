@@ -6,7 +6,6 @@ import { Container } from "../../global"
 import kwesforms from "kwesforms"
 import GajoLogo from "../svgs/gajo_logo"
 import {
-  StyledImage1,
   StyledImage,
   ImageWrapper,
   HeaderButton,
@@ -25,7 +24,10 @@ import "@fontsource/karla"
 export default function Desktop(props) {
   const data = useStaticQuery(graphql`
     query {
-      file(sourceInstanceName: { eq: "product" }, name: { eq: "green-skew" }) {
+      file(
+        sourceInstanceName: { eq: "product" }
+        name: { eq: "green-skew-desktop" }
+      ) {
         childImageSharp {
           fluid(maxWidth: 1000) {
             ...GatsbyImageSharpFluid_tracedSVG

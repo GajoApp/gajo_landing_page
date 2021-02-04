@@ -86,7 +86,7 @@ const Flex = styled.div`
   }
   @media (max-width: ${props => props.theme.screen.lg}) {
     grid-template-columns: 40% 55%;
-    grid-gap: 10%;
+    grid-gap: 5%;
   }
   @media (max-width: ${props => props.theme.screen.md}) {
     grid-template-columns: 1fr;
@@ -101,6 +101,7 @@ const Flex = styled.div`
 const ImageWrapper = styled.div`
   width: 100%;
   padding-bottom: 5%;
+  height: auto;
   align-self: center;
   @media (max-width: ${props => props.theme.screen.lg}) {
     justify-self: center;
@@ -120,6 +121,9 @@ const StyledImage = styled(Img)`
   }
   @media (max-width: ${props => props.theme.screen.lgg}) {
     margin-top: 10%;
+  }
+  @media (max-width: ${props => props.theme.screen.sm}) {
+    width: 100%;
   }
 `
 const ImageWrapperPhone = styled.div`
@@ -257,19 +261,8 @@ const HeaderButton = styled.button`
   }
 `
 
-const StyledImage1 = styled(GajoLogo)`
-  width: 250px;
-  @media (max-width: ${props => props.theme.screen.md}) {
-    width: 400px;
-  }
-  @media (max-width: ${props => props.theme.screen.sm}) {
-    width: 150px;
-  }
-`
-
 export {
   ImageWrapperPhone,
-  StyledImage1,
   StyledImage,
   ImageWrapper,
   HeaderButton,

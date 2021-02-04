@@ -26,13 +26,13 @@ const HeaderTextGroup = styled.div`
       line-height: 3.65rem;
     }
     @media (max-width: ${props => props.theme.screen.lg}) {
-      font-size: 3.0rem;
+      font-size: 3rem;
       padding-top: 0%;
       line-height: 2.95rem;
     }
     @media (max-width: ${props => props.theme.screen.sm}) {
-        font-size: 2.25rem;
-      }
+      font-size: 2.25rem;
+    }
   }
 
   h2 {
@@ -49,7 +49,7 @@ const HeaderTextGroup = styled.div`
     font-weight: 400;
     padding-top: 5%;
     @media (max-width: ${props => props.theme.screen.xlg}) {
-      font-size: 2.0rem;
+      font-size: 2rem;
       padding-top: 0%;
     }
     @media (max-width: ${props => props.theme.screen.lg}) {
@@ -57,12 +57,12 @@ const HeaderTextGroup = styled.div`
       padding-top: 0%;
     }
     @media (max-width: ${props => props.theme.screen.md}) {
-        font-size: 2.25rem;
-        padding-top: 0%;
+      font-size: 2.25rem;
+      padding-top: 0%;
     }
     @media (max-width: ${props => props.theme.screen.sm}) {
-        font-size: 1rem;
-        padding-top: 17%;
+      font-size: 1rem;
+      padding-top: 17%;
     }
   }
 `
@@ -75,18 +75,18 @@ const Flex = styled.div`
   justify-content: space-between;
   align-content: center;
   grid-template-columns: 40% 40%;
-  grid-gap: 45%;
+  grid-gap: 40%;
   @media (max-width: ${props => props.theme.screen.xlg}) {
-    grid-template-columns: 40% 40%;
-    grid-gap: 40%;
+    grid-template-columns: 40% 70%;
+    grid-gap: 50%;
   }
   @media (max-width: ${props => props.theme.screen.lgg}) {
-    grid-template-columns: 40% 40%;
-    grid-gap: 20%;
+    grid-template-columns: 40% 65%;
+    grid-gap: 45%;
   }
   @media (max-width: ${props => props.theme.screen.lg}) {
-    grid-template-columns: 40% 40%;
-    grid-gap: 25%;
+    grid-template-columns: 40% 55%;
+    grid-gap: 10%;
   }
   @media (max-width: ${props => props.theme.screen.md}) {
     grid-template-columns: 1fr;
@@ -97,18 +97,42 @@ const Flex = styled.div`
     grid-gap: 0%;
   }
 `
+
+const ImageWrapper = styled.div`
+  width: 100%;
+  padding-bottom: 5%;
+  align-self: center;
+  @media (max-width: ${props => props.theme.screen.lg}) {
+    justify-self: center;
+    padding-bottom: 0%;
+  }
+  @media (max-width: ${props => props.theme.screen.md}) {
+    justify-self: center;
+    padding-bottom: 0%;
+  }
+`
+
+const StyledImage = styled(Img)`
+  width: 100%;
+
+  @media (max-width: ${props => props.theme.screen.xlg}) {
+    margin-top: 10%;
+  }
+  @media (max-width: ${props => props.theme.screen.lgg}) {
+    margin-top: 10%;
+  }
+`
 const ImageWrapperPhone = styled.div`
-    padding-bottom: 40%
-    @media (max-width: ${props => props.theme.screen.md}) {
-        padding-bottom: 0%
-    }
-    @media (max-width: ${props => props.theme.screen.sm}) {
-        
-        padding-bottom: 35%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+  margin-bottom: 40%;
+  @media (max-width: ${props => props.theme.screen.md}) {
+    padding-bottom: 0%;
+  }
+  @media (max-width: ${props => props.theme.screen.sm}) {
+    margin-bottom: 35%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 `
 
 const FirstNameDiv = styled.div`
@@ -146,7 +170,6 @@ const InputsContainer = styled.div`
   @media (max-width: ${props => props.theme.screen.md}) {
     flex-direction: column;
   }
-  
 `
 const SubmitContainer = styled.div`
   display: flex;
@@ -184,6 +207,7 @@ const HeaderInput = styled.input`
   ::placeholder {
     color: grey;
     opacity: 0.3;
+    font-family: Karla;
   }
   &:focus {
     box-shadow: inset ${props => props.theme.color.secondary} 0px 0px 0px 2px;
@@ -230,29 +254,6 @@ const HeaderButton = styled.button`
   }
   @media (max-width: ${props => props.theme.screen.sm}) {
     margin-left: 0;
-  }
-`
-const ImageWrapper = styled.div`
-  width: 90%;
-  padding-bottom: 5%;
-  align-self: center;
-  @media (max-width: ${props => props.theme.screen.lg}) {
-    justify-self: center;
-    padding-bottom: 0%;
-  }
-  @media (max-width: ${props => props.theme.screen.md}) {
-    justify-self: center;
-    padding-bottom: 0%;
-  }
-`
-
-const StyledImage = styled(Img)`
-  width: 50%;
-  @media (max-width: ${props => props.theme.screen.xlg}) {
-    width: 65%
-  }
-  @media (max-width: ${props => props.theme.screen.sm}) {
-    width: 70%;
   }
 `
 

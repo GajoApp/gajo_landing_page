@@ -1,4 +1,4 @@
-import React, {useEffect} from "react"
+import React, { useEffect } from "react"
 import styled from "styled-components"
 import { graphql, useStaticQuery, Link } from "gatsby"
 import Img from "gatsby-image"
@@ -35,11 +35,11 @@ export default function Desktop(props) {
     }
   `)
   let iphone_img = data.file.childImageSharp.fluid
-  useEffect(() => {
-    window.analytics.track("User Load Desktop", {
-      user: "VisitedDesktop"
-    });
-  })
+  // useEffect(() => {
+  //   window.analytics.track("User Load Desktop", {
+  //     user: "VisitedDesktop"
+  //   });
+  // })
 
   return (
     <Container>

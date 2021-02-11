@@ -184,6 +184,7 @@ const HeaderInput = styled.input`
   ::placeholder {
     color: grey;
     opacity: 0.3;
+    font-family: Karla;
   }
   &:focus {
     box-shadow: inset ${props => props.theme.color.secondary} 0px 0px 0px 2px;

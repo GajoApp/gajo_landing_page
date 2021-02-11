@@ -33,7 +33,7 @@ const Container = styled.div`
   max-width: 1200px;
   width: 100%;
   margin: 0;
-  padding: 0 0 0 5%;
+  padding: 0;
 
   @media (max-width: ${props => props.theme.screen.xlg}) {
     max-width: 1500px;
@@ -53,7 +53,6 @@ const Container = styled.div`
 
   @media (max-width: ${props => props.theme.screen.xs}) {
     max-width: 540px;
-    padding: 0;
   }
 
   ${props =>

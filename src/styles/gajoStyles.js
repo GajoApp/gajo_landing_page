@@ -98,12 +98,12 @@ const Flex = styled.div`
   }
 `
 const ImageWrapperPhone = styled.div`
-    padding-bottom: 40%
+    padding-bottom: 50%
+    align-self: center;
     @media (max-width: ${props => props.theme.screen.md}) {
         padding-bottom: 0%
     }
     @media (max-width: ${props => props.theme.screen.sm}) {
-        
         padding-bottom: 35%;
         display: flex;
         justify-content: center;

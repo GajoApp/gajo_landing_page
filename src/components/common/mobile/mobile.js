@@ -25,7 +25,7 @@ import { Container } from "../../global"
 export default function Mobile(props) {
   const data = useStaticQuery(graphql`
     query {
-        file(sourceInstanceName: { eq: "product" }, name: { eq: "green-skew" }) {
+        file(sourceInstanceName: { eq: "product" }, name: { eq: "MockUp_NoShadow" }) {
           childImageSharp {
             fluid(maxWidth: 1000) {
               ...GatsbyImageSharpFluid_tracedSVG
@@ -35,11 +35,11 @@ export default function Mobile(props) {
       }
   `)
 let iphone_img = data.file.childImageSharp.fluid
-useEffect(() => {
-  window.analytics.track("User Load Mobile", {
-    user: "VisitedMobile"
-  });
-})
+// useEffect(() => {
+//   window.analytics.track("User Load Mobile", {
+//     user: "VisitedMobile"
+//   });
+// })
 
     return(
       <Container>
@@ -58,11 +58,11 @@ useEffect(() => {
               boring.
             </h1>
             </HeaderTextGroup>
-            <ImageWrapper> 
-              <ImageWrapperPhone>
+            <ImageWrapperPhone>
+              {/* <ImageWrapper>  */}
                 <StyledImage fluid={iphone_img} />
-              </ImageWrapperPhone>
-            </ImageWrapper>
+              {/* </ImageWrapper> */}
+            </ImageWrapperPhone> 
             <HeaderTextGroup>
             <p>
               Sign up today to stay in touch and see 

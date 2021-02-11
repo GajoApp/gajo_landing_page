@@ -35,11 +35,11 @@ export default function Desktop(props) {
     }
   `)
   let iphone_img = data.file.childImageSharp.fluid
-  useEffect(() => {
-    window.analytics.track("User Load Desktop", {
-      user: "VisitedDesktop"
-    });
-  })
+  // useEffect(() => {
+  //   window.analytics.track("User Load Desktop", {
+  //     user: "VisitedDesktop"
+  //   });
+  // })
 
   return (
     <Container>

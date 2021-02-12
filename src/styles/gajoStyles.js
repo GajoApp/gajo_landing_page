@@ -26,13 +26,13 @@ const HeaderTextGroup = styled.div`
       line-height: 3.65rem;
     }
     @media (max-width: ${props => props.theme.screen.lg}) {
-      font-size: 3.0rem;
+      font-size: 3rem;
       padding-top: 0%;
       line-height: 2.95rem;
     }
     @media (max-width: ${props => props.theme.screen.sm}) {
-        font-size: 2.25rem;
-      }
+      font-size: 2.25rem;
+    }
   }
 
   h2 {
@@ -49,7 +49,7 @@ const HeaderTextGroup = styled.div`
     font-weight: 400;
     padding-top: 5%;
     @media (max-width: ${props => props.theme.screen.xlg}) {
-      font-size: 2.0rem;
+      font-size: 2rem;
       padding-top: 0%;
     }
     @media (max-width: ${props => props.theme.screen.lg}) {
@@ -57,12 +57,13 @@ const HeaderTextGroup = styled.div`
       padding-top: 0%;
     }
     @media (max-width: ${props => props.theme.screen.md}) {
-        font-size: 2.25rem;
-        padding-top: 0%;
+      font-size: 2.25rem;
+      padding-top: 0%;
     }
     @media (max-width: ${props => props.theme.screen.sm}) {
-        font-size: 1rem;
-        padding-top: 17%;
+      font-size: 1rem;
+      padding-top: 17%;
+      line-height: 1.5rem;
     }
   }
 `
@@ -146,7 +147,6 @@ const InputsContainer = styled.div`
   @media (max-width: ${props => props.theme.screen.md}) {
     flex-direction: column;
   }
-  
 `
 const SubmitContainer = styled.div`
   display: flex;
@@ -250,7 +250,7 @@ const ImageWrapper = styled.div`
 const StyledImage = styled(Img)`
   width: 50%;
   @media (max-width: ${props => props.theme.screen.xlg}) {
-    width: 65%
+    width: 65%;
   }
   @media (max-width: ${props => props.theme.screen.sm}) {
     width: 70%;

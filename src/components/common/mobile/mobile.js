@@ -7,102 +7,105 @@ import GajoLogoMobile from "../svgs/gajo_logo_mobile"
 import "@fontsource/karla"
 import {
   ImageWrapperPhone,
-  StyledImage1, 
-  StyledImage, 
-  ImageWrapper, 
-  HeaderButton, 
-  HeaderInput, 
-  HeaderForm, 
-  SubmitContainer, 
-  InputsContainer, 
-  FormConatiner, 
-  Label, 
-  FirstNameDiv, 
-  Flex, 
-  HeaderTextGroup} from "../../../styles/gajoStyles"
+  StyledImage1,
+  StyledImage,
+  ImageWrapper,
+  HeaderButton,
+  HeaderInput,
+  HeaderForm,
+  SubmitContainer,
+  InputsContainer,
+  FormConatiner,
+  Label,
+  FirstNameDiv,
+  Flex,
+  HeaderTextGroup,
+} from "../../../styles/gajoStyles"
 import { Container } from "../../global"
 
 export default function Mobile(props) {
   const data = useStaticQuery(graphql`
     query {
-        file(sourceInstanceName: { eq: "product" }, name: { eq: "MockUp_NoShadow" }) {
-          childImageSharp {
-            fluid(maxWidth: 1000) {
-              ...GatsbyImageSharpFluid_tracedSVG
-            }
+      file(
+        sourceInstanceName: { eq: "product" }
+        name: { eq: "MockUp_NoShadow" }
+      ) {
+        childImageSharp {
+          fluid(maxWidth: 1000) {
+            ...GatsbyImageSharpFluid_tracedSVG
           }
         }
       }
+    }
   `)
-let iphone_img = data.file.childImageSharp.fluid
-// useEffect(() => {
-//   window.analytics.track("User Load Mobile", {
-//     user: "VisitedMobile"
-//   });
-// })
+  let iphone_img = data.file.childImageSharp.fluid
+  useEffect(() => {
+    window.analytics.track("User Load Mobile", {
+      user: "VisitedMobile"
+    });
+  })
 
-    return(
-      <Container>
-        <Flex>
-          
-            <ImageWrapper>
-              <GajoLogoMobile />
-              <br />
-            </ImageWrapper>
-            <HeaderTextGroup>
-            <h1>
-              Exploring careers
-              <br />
-              shouldn't be
-              <br />
-              boring.
-            </h1>
-            </HeaderTextGroup>
-            <ImageWrapperPhone>
-              {/* <ImageWrapper>  */}
-                <StyledImage fluid={iphone_img} />
-              {/* </ImageWrapper> */}
-            </ImageWrapperPhone> 
-            <HeaderTextGroup>
-            <p>
-              Sign up today to stay in touch and see 
-              <br />
-              when we launch! 🚀 We promise we 
-              <br />
-              won’t spam.
-            </p>
-            <HeaderForm
-              className="kwes-form"
-              action="https://kwes.io/api/foreign/forms/kPeK9BTCz6WeeNnEtSIT"
-            >
-              <FormConatiner>
-                <InputsContainer>
-                  <FirstNameDiv>
-                    <Label for="name">First Name</Label>
-                    <HeaderInput
-                      name="name"
-                      placeholder="Name"
-                      rules="alpha|max:25"
-                    />
-                  </FirstNameDiv>
-                  <div>
-                    <Label for="phone">Phone Number</Label>
-                    <HeaderInput
-                      name="phone"
-                      placeholder="(123) 456-7890"
-                      rules="required|regex:/^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}$"
-                    />
-                  </div>
-                </InputsContainer>
-                <SubmitContainer>
-                  <HeaderButton type="submit">Get Updates</HeaderButton>
-                </SubmitContainer>
-              </FormConatiner>
-            </HeaderForm>
-          </HeaderTextGroup>
-        </Flex>
-        </Container>
-    )
+  return (
+    <Container>
+      <Flex>
+        <ImageWrapper>
+          <GajoLogoMobile />
+          <br />
+        </ImageWrapper>
+        <HeaderTextGroup>
+          <h1>
+            Exploring careers
+            <br />
+            shouldn't be
+            <br />
+            boring.
+          </h1>
+        </HeaderTextGroup>
+        <ImageWrapperPhone>
+          {/* <ImageWrapper>  */}
+          <StyledImage fluid={iphone_img} />
+          {/* </ImageWrapper> */}
+        </ImageWrapperPhone>
+        <HeaderTextGroup>
+          <p>
+            Sign up today to stay in touch and see
+            <br />
+            when we launch! 🚀 We promise we
+            <br />
+            won’t spam.
+          </p>
+          <HeaderForm
+            className="kwes-form"
+            action="https://kwes.io/api/foreign/forms/kPeK9BTCz6WeeNnEtSIT"
+          >
+            <FormConatiner>
+              <InputsContainer>
+                <FirstNameDiv>
+                  <Label for="name">First Name</Label>
+                  <HeaderInput
+                    name="name"
+                    placeholder="Name"
+                    // rules="alpha|max:25"
+                  />
+                </FirstNameDiv>
+                <div>
+                  <Label for="phone">Phone Number</Label>
+                  <HeaderInput
+                    name="phone"
+                    placeholder="(123) 456-7890"
+                    // rules="required|regex:/^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}$"
+                  />
+                </div>
+              </InputsContainer>
+              <SubmitContainer>
+                <HeaderButton type="submit">Get Updates</HeaderButton>
+              </SubmitContainer>
+            </FormConatiner>
+          </HeaderForm>
+        </HeaderTextGroup>
+      </Flex>
+    </Container>
+  )
 }
 
 // const HeaderTextGroup = styled.div`

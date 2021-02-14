@@ -102,7 +102,7 @@ const ImageWrapperPhone = styled.div`
     padding-bottom: 50%
     align-self: center;
     @media (max-width: ${props => props.theme.screen.md}) {
-        padding-bottom: 0%
+        padding-bottom: 40%
     }
     @media (max-width: ${props => props.theme.screen.sm}) {
         padding-bottom: 35%;
@@ -134,8 +134,8 @@ const Label = styled.div`
 const FormConatiner = styled.div`
   display: flex;
   flex-direction: column;
-  margin: 10px;
-  width: ;
+  margin: 10px 0px;
+  width: 100%;
   @media (max-width: ${props => props.theme.screen.xlg}) {
     font-size: 1.5rem;
     padding-top: 0%;
@@ -144,16 +144,10 @@ const FormConatiner = styled.div`
 const InputsContainer = styled.div`
   display: flex;
   flex-direction: row;
+  margin: 0px 10px 0px 0px;
   @media (max-width: ${props => props.theme.screen.md}) {
     flex-direction: column;
   }
-`
-const SubmitContainer = styled.div`
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  margin: 10px;
-  width: 100%;
 `
 
 const HeaderForm = styled.form`
@@ -167,30 +161,29 @@ const HeaderForm = styled.form`
 `
 
 const HeaderInput = styled.input`
-  font-weight: 500;
+  font-weight: 300;
   font-size: 1.3rem;
   color: grey;
   line-height: 1.4rem;
-  width: 100%;
+  width: 90%;
   text-align: left;
   height: 2.5rem;
-  border-width: 1px;
-  border-style: solid;
-  border-color: grey;
-  border-image: initial;
-  border-radius: 10px;
-  padding: 4px 8px;
+  border-style: none;
+  border-bottom: 1px solid rgb(255, 112, 112);
+  padding: 4px 0px;
   outline: 0px;
   ::placeholder {
     color: grey;
     opacity: 0.3;
     font-family: Karla;
   }
-  &:focus {
-    box-shadow: inset ${props => props.theme.color.secondary} 0px 0px 0px 2px;
-  }
+
   @media (max-width: ${props => props.theme.screen.md}) {
     margin-bottom: 8px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   @media (max-width: ${props => props.theme.screen.sm}) {
     display: block;
@@ -199,6 +192,13 @@ const HeaderInput = styled.input`
     justify-content: center;
     align-items: center;
   }
+`
+const SubmitContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  margin: 10px;
+  width: 100%;
 `
 
 const HeaderButton = styled.button`
@@ -210,28 +210,27 @@ const HeaderButton = styled.button`
   letter-spacing: 1px;
   height: 54px;
   width: 100%;
-  display: block;
   margin-left: 8px;
   text-transform: uppercase;
   cursor: pointer;
-  white-space: nowrap;
   background: ${props => props.theme.color.secondary};
   border-radius: 5px;
-  padding: 0px 40px;
+  // padding: 0px 40px;
   border-width: 0px;
   border-style: initial;
   transform: translate(-19px, 5px);
   border-color: initial;
   border-image: initial;
   outline: 0px;
+
   &:hover {
     box-shadow: rgba(110, 120, 152, 0.22) 0px 2px 10px 0px;
   }
-  @media (max-width: ${props => props.theme.screen.md}) {
-  }
-  @media (max-width: ${props => props.theme.screen.sm}) {
-    margin-left: 0;
-  }
+  // @media (max-width: ${props => props.theme.screen.md}) {
+  // }
+  // @media (max-width: ${props => props.theme.screen.sm}) {
+  //   margin-left: 0;
+  // }
 `
 const ImageWrapper = styled.div`
   width: 90%;
@@ -259,6 +258,7 @@ const StyledImage = styled(Img)`
 
 const StyledImage1 = styled(GajoLogo)`
   width: 250px;
+  margin-left: -25%;
   @media (max-width: ${props => props.theme.screen.md}) {
     width: 400px;
   }

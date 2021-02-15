@@ -34,6 +34,9 @@ const Container = styled.div`
   width: 100%;
   margin: 0;
   padding: 0;
+  * {
+    box-sizing: border-box;
+  }
 
   @media (max-width: ${props => props.theme.screen.xlg}) {
     max-width: 1500px;

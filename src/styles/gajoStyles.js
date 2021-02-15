@@ -105,7 +105,7 @@ const ImageWrapperPhone = styled.div`
         padding-bottom: 40%
     }
     @media (max-width: ${props => props.theme.screen.sm}) {
-        padding-bottom: 35%;
+        padding-bottom: 45%;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -144,7 +144,7 @@ const FormConatiner = styled.div`
 const InputsContainer = styled.div`
   display: flex;
   flex-direction: row;
-  margin: 0px 10px 0px 0px;
+  // margin: 0px  0px 0px;
   @media (max-width: ${props => props.theme.screen.md}) {
     flex-direction: column;
   }
@@ -154,7 +154,6 @@ const HeaderForm = styled.form`
   display: flex;
   flex-direction: row;
   padding-bottom: 16px;
-
   @media (max-width: ${props => props.theme.screen.sm}) {
     flex-direction: column;
   }
@@ -197,7 +196,7 @@ const SubmitContainer = styled.div`
   display: flex;
   justify-content: center;
   align-content: center;
-  margin: 10px;
+  margin: 10px 0px;
   width: 100%;
 `
 
@@ -210,27 +209,21 @@ const HeaderButton = styled.button`
   letter-spacing: 1px;
   height: 54px;
   width: 100%;
-  margin-left: 8px;
   text-transform: uppercase;
   cursor: pointer;
   background: ${props => props.theme.color.secondary};
   border-radius: 5px;
-  // padding: 0px 40px;
   border-width: 0px;
   border-style: initial;
-  transform: translate(-19px, 5px);
+
   border-color: initial;
   border-image: initial;
   outline: 0px;
 
+  // transform: translate(-19px, 5px);
   &:hover {
     box-shadow: rgba(110, 120, 152, 0.22) 0px 2px 10px 0px;
   }
-  // @media (max-width: ${props => props.theme.screen.md}) {
-  // }
-  // @media (max-width: ${props => props.theme.screen.sm}) {
-  //   margin-left: 0;
-  // }
 `
 const ImageWrapper = styled.div`
   width: 90%;

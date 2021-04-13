@@ -36,7 +36,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-segment-js`,
       options: {
-        prodKey: `jvLkZjADYRb6vCz6tLTfubWwBFrDIJlf`,
+        prodKey: `huhl4V0Ij69xfcFN2zNnLNB32UDzU76H`,
   
         // if you have a development env for your segment account, paste that key here
         // when process.env.NODE_ENV === 'development'

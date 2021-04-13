@@ -28,7 +28,7 @@ export default function Mobile(props) {
     query {
       file(
         sourceInstanceName: { eq: "product" }
-        name: { eq: "MockUp_NoShadow" }
+        name: { eq: "MockUp_NoShadow_New" }
       ) {
         childImageSharp {
           fluid(maxWidth: 1000) {
@@ -44,6 +44,11 @@ export default function Mobile(props) {
       user: "VisitedMobile"
     });
   })
+  const signedUP = () => {
+    window.analytics.track("User Submit Mobile", {
+      user: "SignedUpMobile"
+    });
+  }
 
   return (
     <Container>
@@ -98,7 +103,7 @@ export default function Mobile(props) {
                 </div>
               </InputsContainer>
               <SubmitContainer>
-                <HeaderButton type="submit">Get Updates</HeaderButton>
+                <HeaderButton type="submit" onClick={()=>signedUP()}>Get Updates</HeaderButton>
               </SubmitContainer>
             </FormConatiner>
           </HeaderForm>

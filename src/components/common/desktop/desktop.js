@@ -44,8 +44,8 @@ export default function Desktop(props) {
     });
   })
   const signedUP = () => {
-    window.analytics.track("User Submit Mobile", {
-      user: "SignedUpMobile"
+    window.analytics.track("User Submit Desktop", {
+      user: "SignedUpDesktop"
     });
   }
 
